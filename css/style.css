@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* para settear toda la pagina sin ocupar espacio mas que lo que ocupe la etiqueta */
+}
+
+body {
+    background-image: url(../Imagenes/background_image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment:scroll;
+}
+
+header{
+    background-color: rgba(225, 233, 120, 0.705);
+    display: grid;
+    grid-template-columns:  0.3fr 1fr 0.8fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+   /*  "logo busqueda login"
+    "navbar navbar navbar"; */
+    "logo busqueda login"
+    "logo navbar navbar";
+    box-sizing: border-box;
+}
+.logo{
+    grid-area: logo;
+    justify-self: center;
+}
+.imglogo {
+    width: 125px;
+    height: 125px;  
+}
+.barbusqueda{
+    grid-area: busqueda;
+    align-self: center;
+    justify-self: center;
+}
+.signin_signup{
+    grid-area: login;
+    justify-self: center;
+}
+.nav__bar{
+    grid-area: navbar;
+    padding-bottom: 10px;
+    align-self: end;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    
+}
+.signin_signup a{
+    display: inline-block;
+    padding: 10px 10px 0 10px;
+}
+main img{ /*imagenes para carrousel */
+    height: 525px;
+    width: 100%;
+}
+.nav__bar a, .signin_signup a, .categorias a{
+    font-size: 18px;
+    font-family: "Merri";
+    color: rgb(128, 101, 29);
+    font-weight: 600;
+
+}
+input {
+    width: 300px;
+    height: 30px;
+    border: 0;
+    font-family: "Merri", serif;
+    font-weight: 600;
+    color: rgb(128, 101, 29);
+    background-color: rgba(207, 230, 253, 0.753);
+    outline: none; 
+}
+
+.barbusqueda img {
+    width: 30px;
+    height: 30px;
+}
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.contacto h6{
+    margin: 50px 0;
+}
+.contacto iframe{
+    width: 400px;
+    height: 300px;
+}
+.line_footer{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 150px 170px;
+    grid-template-areas: 
+    ". redes ."
+    "line1 redes line2";
+}
+.line_border{
+    grid-area: line1;
+    border-top: solid 3px black;
+}
+.line_border2{
+    grid-area: line2;
+    border-top: solid 3px black;
+}
+.redes{
+    grid-area: redes;
+    align-self: center;
+}
+
+/*
+------------------------------------------------ */
+/* css de catalogo */
+#header_catalogo{
+    margin-bottom: 15px;
+}
+#header_catalogo, #header_nosotros, #header_contacto, #header_carrito{
+    position: static;
+    
+}
+.art_desc{
+    height: 300px;
+    position:relative;
+    overflow: scroll;
+    border: outset 3px goldenrod;
+    text-align: center;
+    padding-bottom: 10px;
+    
+}
+.art_desc img{
+    border: solid 2px goldenrod;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.art_desc img, .art_desc span, .art_desc a{
+    margin: 10px 19px;
+}
+.catalogo{
+    padding-bottom:10px;
+}
+span, .art_desc a, footer a{
+    color: rgb(128, 101, 29);
+}
+.art_desc a, .informacion p, .informacion h1, .informacion a{
+    font-family: "Merri", serif;
+    font-weight: 600;
+}
+/* ------------------------------------------------ */
+/* css de sobre nosotros */
+.informacion{
+    width: 500px;
+    text-align: center;
+    position: relative;
+    bottom: 90px;  
+}
+.informacion p,  .informacion a{
+    font-size: 20px;
+    background: #C4C41E;
+    background: radial-gradient(ellipse farthest-corner at top right, #C4C41E 55%, #E8FF54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.informacion h1, .carrito td, .carrito th{
+    background: #8C8C15;
+    background: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.info_logo img{
+    width: 550px;
+    height: 550px;
+}
+.nosotros{
+    background-color: rgba(0, 0, 0, 0.801);
+}
+.maps iframe{
+    width: 450px;
+    height: 350px;
+    margin-left: 10px;
+    border: solid 2px goldenrod;
+    border-radius: 5px;
+}
+.info_maps h2, .info_visita, .info_consulta{
+    text-align: center;
+}
+.info_visita, .info_consulta{
+    position:relative;
+    bottom: 297px;
+    margin: 0 30px;
+}
+.info_maps p{
+    position: relative;
+    top: 40px;
+    font-size: 17px;
+}
+.info_maps h2{
+    font-size: 26px;
+}
+/* ------------------------------------------ */
+/* css de contacto */
+.cont img, .contacto_maps img {
+    width: 45px;
+    height: 45px; 
+    
+}
+.cont a{
+    display: block;
+    position: relative;
+    bottom: 35px;
+    left: 75px;
+    
+}
+.cont a, .contacto_maps a{
+    text-decoration: underline;
+    font-family: "Merri", serif;
+    font-weight: 600;
+    color: rgb(128, 101, 29);
+}
+.cont{
+    margin-left: 40px;
+    position: relative;
+    bottom: 237px;
+}
+.contacto_maps iframe{
+    width: 525px;
+    height: 425px;
+    border: solid 2px goldenrod;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.contacto_maps img{
+    display: block;
+}
+.contacto_maps{
+    margin-left: 20px;
+    text-align: center;
+}
+.main_contacto{
+    padding-bottom:20px;
+}
+footer p{
+    text-align: right;
+}
+/* ------------------------------------------------ */
+/* css de carrito de compras */
+.carrito{
+    text-align: center;
+    position: relative;
+}
+table{
+    background-color: #131312c5;
+    border: solid 1px gold;
+    display: inline-block;
+}
+td{
+    padding: 10px;
+    border: solid 1px gold;
+}
+.carrito span{
+    display: block;
+    right: 25px;
+}
+

@@ -5,14 +5,27 @@
 }
 
 body {
-    background-image: url(../Imagenes/background_image.jpg);
+    background-image: url(../imagenes/background_image.jpg);
     background-size: cover;
     background-position: center;
     background-attachment:scroll;
 }
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+li {
+    list-style-type: none;
+}
 
+a {
+    text-decoration: none;
+    
+}
+/* -------------------------------------------------------general */
 header{
-    background-color: rgba(225, 233, 120, 0.705);
     display: grid;
     grid-template-columns:  0.3fr 1fr 0.8fr;
     grid-template-rows: auto auto;
@@ -22,6 +35,7 @@ header{
     "logo busqueda login"
     "logo navbar navbar";
     box-sizing: border-box;
+    background-color: rgba(225, 233, 120, 0.705);
 }
 .logo{
     grid-area: logo;
@@ -36,41 +50,9 @@ header{
     align-self: center;
     justify-self: center;
 }
-.signin_signup{
-    grid-area: login;
-    justify-self: center;
-}
-.nav__bar{
-    grid-area: navbar;
-    padding-bottom: 10px;
-    align-self: end;
-}
-ul{
-    display: flex;
-    justify-content: space-around;
-}
-li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    
-}
-.signin_signup a{
-    display: inline-block;
-    padding: 10px 10px 0 10px;
-}
-main img{ /*imagenes para carrousel */
-    height: 525px;
-    width: 100%;
-}
-.nav__bar a, .signin_signup a, .categorias a{
-    font-size: 18px;
-    font-family: "Merri";
-    color: rgb(128, 101, 29);
-    font-weight: 600;
-
+.barbusqueda img {
+    width: 30px;
+    height: 30px;
 }
 input {
     width: 300px;
@@ -82,48 +64,108 @@ input {
     background-color: rgba(207, 230, 253, 0.753);
     outline: none; 
 }
-
-.barbusqueda img {
-    width: 30px;
-    height: 30px;
+.signin_signup{
+    grid-area: login;
+    justify-self: center;
 }
+.nav__bar{
+    grid-area: navbar;
+    padding-bottom: 10px;
+    align-self: end;
+}
+
+.signin_signup a{
+    display: inline-block;
+    padding: 10px 10px 0 10px;
+}
+/* -------------------------------------------------------header */
+main img{ /*imagenes para carrousel */
+    height: 525px;
+    width: 100%;
+}
+/* -------------------------------------------------------main */
+.categorias{
+    padding: 20px 0;
+}
+.categorias h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* -------------------------------------------------------section categorias*/
 .contacto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 20px 15px 0 15px;
 }
-.contacto h6{
+.contacto h5{
     margin: 50px 0;
 }
 .contacto iframe{
     width: 400px;
-    height: 300px;
+    height: 220px;
+    margin: 20px 0;
 }
+/* -------------------------------------------------------section contacto */
 .line_footer{
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: 150px 170px;
+    grid-template-rows: auto 100px;
     grid-template-areas: 
-    ". redes ."
-    "line1 redes line2";
+    "line redes line2"
+    ". subir copyR";
 }
-.line_border{
-    grid-area: line1;
-    border-top: solid 3px black;
+.line{
+    grid-area: line;
+    align-self: center;
 }
-.line_border2{
-    grid-area: line2;
-    border-top: solid 3px black;
+.line2{
+    grid-area: line2
 }
+
 .redes{
     grid-area: redes;
     align-self: center;
 }
+.volver_ini{
+    grid-area: subir;
+    align-self: center;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: rgba(224, 223, 141, 0.911);
+    border-radius: 5px;
+    border: 1px solid rgb(128, 101, 29);
+}
+.line_footer h5{
+    grid-area: copyR;
+    justify-self: end;
+    align-self: end;
+}
+/* -------------------------------------------------------footer */
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a{
+    font-size: 18px;    
+}
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a, h2, h5{
+font-family: "Merri", serif;
+    color: rgb(128, 101, 29);
+    font-weight: 600;
+}
+.categorias, .contacto, main, .line{
+    border-top: 3px solid rgb(128, 101, 29);
+}
+.contacto iframe{
+    border: solid 2px goldenrod;
+    border-radius: 5px;
+}
+ .categorias, .contacto, #redes_sociales{
+background-color: rgba(160, 255, 239, 0.418);
+}
+/* -------------------------------------------------------clases compartidas*/
 
 /*
------------------------------------------------- */
-/* css de catalogo */
+-------------------------------------------------------
+-------------------------------------------------------
+ css de catalogo */
 #header_catalogo{
     margin-bottom: 15px;
 }
@@ -252,9 +294,7 @@ span, .art_desc a, footer a{
 .main_contacto{
     padding-bottom:20px;
 }
-footer p{
-    text-align: right;
-}
+
 /* ------------------------------------------------ */
 /* css de carrito de compras */
 .carrito{

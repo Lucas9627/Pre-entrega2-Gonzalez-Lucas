@@ -49,20 +49,30 @@ header{
     grid-area: busqueda;
     align-self: center;
     justify-self: center;
+    position: relative;
 }
-.barbusqueda img {
-    width: 30px;
-    height: 30px;
+
+.barbusqueda button{
+    background-color: rgba(207, 230, 253, 0.753);
+    position: absolute;
+    border: 1px solid rgb(128, 101, 29);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    
 }
 input {
     width: 300px;
-    height: 30px;
-    border: 0;
+    height: 32px;
+    border: 1px solid rgb(128, 101, 29);
+    border-right: none;
     font-family: "Merri", serif;
     font-weight: 600;
     color: rgb(128, 101, 29);
     background-color: rgba(207, 230, 253, 0.753);
     outline: none; 
+    border-radius: 5px 0 0 5px;
+    padding-left: 5px;
+    
 }
 .signin_signup{
     grid-area: login;
@@ -79,7 +89,7 @@ input {
     padding: 10px 10px 0 10px;
 }
 /* -------------------------------------------------------header */
-main img{ /*imagenes para carrousel */
+.carrusel-img img{ /*imagenes para carrousel */
     height: 525px;
     width: 100%;
 }
@@ -114,6 +124,7 @@ main img{ /*imagenes para carrousel */
     grid-template-areas: 
     "line redes line2"
     ". subir copyR";
+    padding-top: 40px;
 }
 .line{
     grid-area: line;
@@ -142,11 +153,11 @@ main img{ /*imagenes para carrousel */
     align-self: end;
 }
 /* -------------------------------------------------------footer */
-.nav__bar a, .signin_signup a, .categorias a, .line_footer a{
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a, span{
     font-size: 18px;    
 }
-.nav__bar a, .signin_signup a, .categorias a, .line_footer a, h2, h5{
-font-family: "Merri", serif;
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a, h2, h5, span, .art_desc a{
+    font-family: "Merri", serif;
     color: rgb(128, 101, 29);
     font-weight: 600;
 }
@@ -157,8 +168,12 @@ font-family: "Merri", serif;
     border: solid 2px goldenrod;
     border-radius: 5px;
 }
- .categorias, .contacto, #redes_sociales{
-background-color: rgba(160, 255, 239, 0.418);
+ .categorias, .contacto, #redes_sociales, .art_desc{
+    background-color: rgba(160, 255, 239, 0.418);
+}
+.barbusqueda img,  .ico_chango img{
+    width: 30px;
+    height: 30px;
 }
 /* -------------------------------------------------------clases compartidas*/
 
@@ -166,39 +181,37 @@ background-color: rgba(160, 255, 239, 0.418);
 -------------------------------------------------------
 -------------------------------------------------------
  css de catalogo */
-#header_catalogo{
-    margin-bottom: 15px;
-}
-#header_catalogo, #header_nosotros, #header_contacto, #header_carrito{
-    position: static;
-    
-}
 .art_desc{
-    height: 300px;
-    position:relative;
-    overflow: scroll;
-    border: outset 3px goldenrod;
+    height: 450px;
+    overflow: auto;
+    border: outset 3px rgba(255, 195, 31, 0.849);
     text-align: center;
-    padding-bottom: 10px;
-    
+    margin: 15px;
+    scrollbar-width: none;
 }
-.art_desc img{
+.carrito{
     border: solid 2px goldenrod;
     border-radius: 5px;
-    margin: 0 5px;
 }
-.art_desc img, .art_desc span, .art_desc a{
-    margin: 10px 19px;
+.art_desc ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 10px;
 }
-.catalogo{
-    padding-bottom:10px;
+.art_desc li{
+    display: flex;
+    flex-direction: column;
 }
-span, .art_desc a, footer a{
-    color: rgb(128, 101, 29);
+.catego_catalogo{
+    border-bottom: 3px solid rgb(128, 101, 29);
 }
-.art_desc a, .informacion p, .informacion h1, .informacion a{
-    font-family: "Merri", serif;
-    font-weight: 600;
+.ico_chango button{
+    border: none;
+    background-color: rgba(160, 255, 239, 0.418);
+}
+.ico_chango a{
+    color: rgb(120, 2, 255);
 }
 /* ------------------------------------------------ */
 /* css de sobre nosotros */

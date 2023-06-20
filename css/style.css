@@ -8,7 +8,7 @@ body {
     background-image: url(../imagenes/background_image.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment:scroll;
+    background-attachment:fixed;
 }
 ul{
     display: flex;
@@ -25,6 +25,7 @@ a {
     
 }
 /* -------------------------------------------------------general */
+
 header{
     display: grid;
     grid-template-columns:  0.3fr 1fr 0.8fr;
@@ -51,7 +52,9 @@ header{
     justify-self: center;
     position: relative;
 }
-
+.boton-hambur{
+    display: none;
+}
 .barbusqueda button{
     background-color: rgba(207, 230, 253, 0.753);
     position: absolute;
@@ -88,6 +91,7 @@ input {
     display: inline-block;
     padding: 10px 10px 0 10px;
 }
+
 /* -------------------------------------------------------header */
 .carrusel-img img{ /*imagenes para carrousel */
     height: 525px;
@@ -105,7 +109,7 @@ input {
 .contacto{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px 15px 0 15px;
 }
 .contacto h5{
@@ -141,8 +145,11 @@ input {
 
 .line_footer h5{
     grid-area: copyR;
-    justify-self: end;
-    align-self: end;
+    place-self: end;
+    margin-right: 20px;
+}
+.gmail{
+    display: none;
 }
 /* -------------------------------------------------------footer */
 .nav__bar a, .signin_signup a, .categorias a, .line_footer a, span, .footer_contacto p{
@@ -215,7 +222,7 @@ input {
 }
 .ico_chango button{
     border: none;
-    background-color: rgba(160, 255, 239, 0.418);
+    background-color: transparent;
 }
 .ico_chango a{
     color: rgb(120, 2, 255);
@@ -225,6 +232,7 @@ input {
 .nosotros{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .informacion{
     width: 500px;
@@ -257,22 +265,7 @@ input {
     border: solid 2px goldenrod;
     border-radius: 5px;
 }
-.info_maps h2, .info_visita, .info_consulta{
-    text-align: center;
-}
-.info_visita, .info_consulta{
-    position:relative;
-    bottom: 297px;
-    margin: 0 30px;
-}
-.info_maps p{
-    position: relative;
-    top: 40px;
-    font-size: 17px;
-}
-.info_maps h2{
-    font-size: 26px;
-}
+
 /* ------------------------------------------ */
 /* css de contacto */
 .cont img, .name_street img {
@@ -291,9 +284,6 @@ input {
     row-gap: 20px;
     align-items: center;
     padding: 20px;
-}
-.main_contacto h2{
-    text-align: center;
 }
 .title-contact{
     grid-area: title-contact;
@@ -397,5 +387,109 @@ input {
 .tyc{
     margin-top: 40px;
 }
+/*------------------------------------------------------@media queries */
+@media (max-width: 576px){
+    body{
+        background-image: url(../imagenes/fondo_mobile.png.jpg);
+    }
+    header{
+        display: flex;
+        background-color:transparent;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5{
+        display: none;
+    }
+    .barbusqueda input{
+        width: 200px;
+    }
+    .barbusqueda{
+        right: 30px;
+    }
+    .boton-hambur{
+        display: inline-block;
+        background-color: #85ddfae7;
+    }
+    .boton-hambur span{
+        color: aliceblue;
+    }
+    .boton-hambur:hover, .list-hambur{
+        background-color: #5fc8ec;
+    }
+    .boton-hambur:checked+.boton-hambur, .boton-hambur.active, .boton-hambur.show, .boton-hambur:first-child:active, :not(.boton-hambur)+.boton-hambur:active{
+        background-color: #5fc8ec;
+    }
+    .list-hambur a{
+        color: aliceblue;
+        font-family: "Merri", serif;
+        font-weight: 600;
+    }
+    .carrusel-img img{
+        height: 435px;
+    }
+    .categorias, .contacto, #redes_sociales{
+        background-color: transparent;
+    }
+    .categorias h2, .contacto h2{
+        font-size: 38px;
+    }
+    .categorias a{
+        font-size: 25px;
+    }
+    .categorias ul{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .contacto{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contacto iframe{
+        width: 95vw;
+    }
+    .index_visita h5{
+        display: inline-block;
+        margin-top: 0;
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+    .line_footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .redes li{
+        display: flex;
+    }
+    .redes{
+        align-self: normal;
+    }
+    .gmail img{
+        height: 105px;
+        width: 95px;
+    }
+    .line_footer h5{
+        place-self: center;
+        padding-top: 20px;
+        font-size: 23px;
+    }
+    /* media query de catalogo */
+    .art_desc ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .art_desc span, .art_desc a{
+        font-size: 20px;
+    }
+    .ico_chango button, .art_desc{
+        background-color: transparent;
+    }
+}
+
+    
 
 

@@ -4,31 +4,32 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="shortcut icon" href="../Imagenes/favicon_360x360.png" type="image/x-icon">
         <link rel="stylesheet" href="../css/style.css">
         <title>ThaisBijouterie</title>
     </head>
     <body>
-        <header id="header_contacto">
-            <a href="../index.html" name="principio">
-            <img class="logo" src="../Imagenes/logo.png" alt="ThaisBijouterieAccesorios"><!-- IMAGEN DE LOGO -->
-            </a>     
+        <header>
+            <div class="logo">
+                <a href="../index.html" name="principio" >
+                <img class="imglogo" src="../imagenes/logo.png" alt="ThaisBijouterieAccesorios"><!-- IMAGEN DE LOGO -->
+                </a>
+            </div>  
             <div class="barbusqueda">
                 <input type="text" placeholder="Barra de Búsqueda">
-                <img src="../Imagenes/icono_busqueda.png" alt="icono_lupa">
-            </div>
-            <!-- ACA DEBERIA IR UNA BARRA DE BUSQUEDA -->
+                <button><img src="../imagenes/icono_busqueda.png" alt="icono_lupa"></button>
+            </div><!-- UNA BARRA DE BUSQUEDA -->
             <div class="signin_signup">
                     <a href="">INICIAR SESION</a><!-- PARA LOGEARSE -->
                     <a href="">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
             </div><!-- PARA EL LOGIN Y REGISTRARSE. AUN NO SE HA LINKEADO NADA -->
-            <nav>
-                <div class="navbar">
+            <nav class="nav__bar">
                 <ul>
                     <li>
                         <a href="../index.html">INICIO</a><!-- ME LLEVARA AL   INICIO DE LA PAGINA -->
                     </li>
-
+                    
                     <li>
                         <a href="catalogo.html">CATALOGO</a><!-- ME LLEVARA A LA PAGINA DE CATALOGO -->
                     </li>
@@ -44,31 +45,28 @@
                         <a href="carrito_compras.html">CARRITO DE COMPRAS</a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
                     </li>
                     </ul>
-                    </div>
                 </nav>
         </header>
         <main class="main_contacto">
-            <div class="cont">
-                <h2>Contáctanos a nuestros portales.</h2>
-                <img src="../Imagenes/whatsapp.png" alt="Icono Whats'app">
-                <a href=""target="_blank">numero falso</a>
+            <h2 class="title-contact">Contáctanos a nuestros portales.</h2>
+            <div class="cont">   
+                <a href=""target="_blank"><img src="../Imagenes/whatsapp.png" alt="Icono Whats'app">Numero Falso</a>
                 <!-- no contemplado -->
-                <img src="../Imagenes/facebook.png" alt="Icono Facebook">
-                <a href="https://www.facebook.com/ThaisBijouterieAccesorios"target="_blank">Síguenos en Facebook</a>
-                <img src="../Imagenes/instagram.png" alt="Icono instagram">
-                <a href="https://www.instagram.com/thaisbijouterie1/" target="_blank">Síguenos en Instagram</a>
-                <img src="../Imagenes/gmail.png" alt="Icono de Gmail">
-                <a href=""target="_blank">fakemail@gmail.com</a><!-- no contemplado -->
+                <a href="https://www.facebook.com/ThaisBijouterieAccesorios"target="_blank"><img src="../Imagenes/facebook.png" alt="Icono Facebook">Síguenos en Facebook</a>
+                <a href="https://www.instagram.com/thaisbijouterie1/" target="_blank"><img src="../Imagenes/instagram.png" alt="Icono instagram">Síguenos en Instagram</a>
+                <a href=""target="_blank"><img src="../Imagenes/gmail.png" alt="Icono de Gmail">fakemail@gmail.com</a><!-- no contemplado -->
             </div>
-            <div class="contacto_maps">
-                <h2>Puedes visitarnos también a nuestro local.</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52529.59935972426!2d-58.583322349999996!3d-34.62691415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1684282558369!5m2!1ses!2sar"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2 class="title-location">Puedes visitarnos también a nuestro local.</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52529.59935972426!2d-58.583322349999996!3d-34.62691415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1684282558369!5m2!1ses!2sar"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="name_street">
                 <img src="../Imagenes/icono_maps.png" alt="Icono de ubicación">
                 <a href="https://goo.gl/maps/4PutQ6aeva8oP7BQ9" target="_blank">Calle Falsa 1234, Capital Federal, Argentina</a>
             </div>
         </main>
-        <footer>
+        <footer class="footer_contacto">
+            <div class="line"></div>
             <a href="#principio">SUBIR</a>
+            <div class="line line2"></div>
             <p>Derechos de autor</p>
         </footer>
     </body>

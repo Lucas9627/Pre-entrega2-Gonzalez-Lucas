@@ -138,25 +138,17 @@ input {
     grid-area: redes;
     align-self: center;
 }
-.volver_ini{
-    grid-area: subir;
-    align-self: center;
-    justify-self: center;
-    padding: 10px 20px;
-    background-color: rgba(224, 223, 141, 0.911);
-    border-radius: 5px;
-    border: 1px solid rgb(128, 101, 29);
-}
+
 .line_footer h5{
     grid-area: copyR;
     justify-self: end;
     align-self: end;
 }
 /* -------------------------------------------------------footer */
-.nav__bar a, .signin_signup a, .categorias a, .line_footer a, span{
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a, span, .footer_contacto p{
     font-size: 18px;    
 }
-.nav__bar a, .signin_signup a, .categorias a, .line_footer a, h2, h5, span, .art_desc a{
+.nav__bar a, .signin_signup a, .categorias a, .line_footer a, h2, h5, span, .art_desc a, .footer_contacto a, .footer_contacto p, .main_carrito p{
     font-family: "Merri", serif;
     color: rgb(128, 101, 29);
     font-weight: 600;
@@ -168,12 +160,27 @@ input {
     border: solid 2px goldenrod;
     border-radius: 5px;
 }
- .categorias, .contacto, #redes_sociales, .art_desc{
+ .categorias, .contacto, #redes_sociales, .art_desc, .footer_contacto, .main_contacto{
     background-color: rgba(160, 255, 239, 0.418);
 }
 .barbusqueda img,  .ico_chango img{
     width: 30px;
     height: 30px;
+}
+.volver_ini, .footer_contacto a{
+    grid-area: subir;
+    align-self: center;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: rgba(224, 223, 141, 0.911);
+    border-radius: 5px;
+    border: 1px solid rgb(128, 101, 29);
+}
+.informacion h1, .table-container h4, .table-container span, .table-container h2{
+    background: #8C8C15;
+    background: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* -------------------------------------------------------clases compartidas*/
 
@@ -215,11 +222,17 @@ input {
 }
 /* ------------------------------------------------ */
 /* css de sobre nosotros */
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+}
 .informacion{
     width: 500px;
-    text-align: center;
-    position: relative;
-    bottom: 90px;  
+    text-align: center;   
+    align-self:center;
+}
+.informacion p{
+    padding: 15px;
 }
 .informacion p,  .informacion a{
     font-size: 20px;
@@ -229,12 +242,7 @@ input {
     -webkit-text-fill-color: transparent;
 
 }
-.informacion h1, .carrito td, .carrito th{
-    background: #8C8C15;
-    background: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 .info_logo img{
     width: 550px;
     height: 550px;
@@ -267,64 +275,130 @@ input {
 }
 /* ------------------------------------------ */
 /* css de contacto */
-.cont img, .contacto_maps img {
-    width: 45px;
-    height: 45px; 
-    
+.cont img, .name_street img {
+    width: 60px;
+    height: 60px; 
+    margin-right: 30px;
+}
+.main_contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 50px;
+    grid-template-areas: 
+    "title-contact title-location"
+    "cont contacto_maps"
+    ". name_street";
+    row-gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+.main_contacto h2{
+    text-align: center;
+}
+.title-contact{
+    grid-area: title-contact;
+}
+.title-location{
+    grid-area: title-location;
+}
+.cont{
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
 }
 .cont a{
-    display: block;
-    position: relative;
-    bottom: 35px;
-    left: 75px;
-    
+    margin: 25px 0;
+    font-size: 25px;
 }
-.cont a, .contacto_maps a{
-    text-decoration: underline;
+.contacto_maps{
+    grid-area: contacto_maps;
+}
+.name_street{
+    grid-area: name_street;
+}
+
+.cont a, .name_street a{
+    text-decoration: none;
     font-family: "Merri", serif;
     font-weight: 600;
     color: rgb(128, 101, 29);
 }
-.cont{
-    margin-left: 40px;
-    position: relative;
-    bottom: 237px;
+.name_street a{
+    font-size: 20px;
 }
-.contacto_maps iframe{
+.main_contacto iframe{
     width: 525px;
     height: 425px;
     border: solid 2px goldenrod;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
-.contacto_maps img{
-    display: block;
+.footer_contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 100px;
+    grid-template-areas: 
+    "line volver line2"
+    ". . copyr";
+    padding-top: 50px;
 }
-.contacto_maps{
-    margin-left: 20px;
-    text-align: center;
+.footer_contacto a{
+    grid-area: volver;
 }
-.main_contacto{
-    padding-bottom:20px;
+.footer_contacto p{
+    grid-area: copyr;
+    place-self: end;
+    margin-right: 20px;
 }
-
 /* ------------------------------------------------ */
 /* css de carrito de compras */
-.carrito{
+.main_carrito{
     text-align: center;
-    position: relative;
+    margin: 20px;
 }
-table{
+.table-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    box-sizing: border-box;
     background-color: #131312c5;
-    border: solid 1px gold;
-    display: inline-block;
+    border: solid 1px goldenrod;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-td{
-    padding: 10px;
-    border: solid 1px gold;
+.table-container :first-child{
+    grid-column-start: 1;
+    grid-column-end: 6;
 }
-.carrito span{
-    display: block;
-    right: 25px;
+.table-container :nth-last-child(2){
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: end;
+    border:none;    
 }
+.table-container :last-child{
+    border: none;
+    border-left: solid 1px goldenrod;
+    
+}
+.table-container h4, .table-container span{
+    border: solid 1px goldenrod;
+}
+.table-container h4{
+    margin: 0;
+    border-right: 0;
+}
+.table-container span{
+    border-top: 0;
+    border-right: 0;
+}
+.main_carrito p{
+    font-size: 20px;
+    margin: 20px 20px;
+}
+.tyc{
+    margin-top: 40px;
+}
+.main_carrito{
+   
+}
+
 

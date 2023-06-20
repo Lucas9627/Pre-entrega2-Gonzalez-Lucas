@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="shortcut icon" href="../Imagenes/favicon_360x360.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <title>ThaisBijouterie</title>
 </head>
 <body>
-    <header id="header_carrito">
-        <a href="../index.html" name="principio">
-        <img class="logo" src="../Imagenes/logo.png" alt="ThaisBijouterieAccesorios"><!-- IMAGEN DE LOGO -->
-        </a>     
+    <header>
+        <div class="logo">
+            <a href="../index.html" name="principio" >
+            <img class="imglogo" src="../imagenes/logo.png" alt="ThaisBijouterieAccesorios"><!-- IMAGEN DE LOGO -->
+            </a>
+        </div>  
         <div class="barbusqueda">
             <input type="text" placeholder="Barra de Búsqueda">
-            <img src="../Imagenes/icono_busqueda.png" alt="icono_lupa">
-        </div>
-        <!-- ACA DEBERIA IR UNA BARRA DE BUSQUEDA -->
+            <button><img src="../imagenes/icono_busqueda.png" alt="icono_lupa"></button>
+        </div><!-- UNA BARRA DE BUSQUEDA -->
         <div class="signin_signup">
                 <a href="">INICIAR SESION</a><!-- PARA LOGEARSE -->
                 <a href="">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
         </div><!-- PARA EL LOGIN Y REGISTRARSE. AUN NO SE HA LINKEADO NADA -->
-        <nav>
-            <div class="navbar">
+        <nav class="nav__bar">
             <ul>
                 <li>
                     <a href="../index.html">INICIO</a><!-- ME LLEVARA AL   INICIO DE LA PAGINA -->
@@ -44,67 +45,58 @@
                     <a href="carrito_compras.html">CARRITO DE COMPRAS</a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
                 </li>
                 </ul>
-                </div>
             </nav>
     </header>
     <main class="main_carrito">
-        <div class="carrito">
+        <div class="table-container">
             <h2>MI CARRITO</h2>
-            <table>
-                <tr>
-                    <th>Artículo</th>
-                    <th>Descripción</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Subtotal</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Pulsera artesanal con piedras</td>
-                    <td>3</td>
-                    <td>$500</td>
-                    <td>$1500</td>
-                </tr>  
-                <tr>
-                    <td>2</td>
-                    <td>Holder de cadenas con dije de estrella</td>
-                    <td>2</td>
-                    <td>$350</td>
-                    <td>$700</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Anillo con mostacillas negras</td>
-                    <td>4</td>
-                    <td>$150</td>
-                    <td>$600</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Gargantilla con dije en punta</td>
-                    <td>1</td>
-                    <td>$520</td>
-                    <td>$520</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Aros con perla y strass corazon</td>
-                    <td>3</td>
-                    <td>$200</td>
-                    <td>$600</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Pulsera de mostacillas con tanza doble </td>
-                    <td>2</td>
-                    <td>$250</td>
-                    <td>$500</td>
-                </tr>
-            </table>
-            <span>TOTAL GENERAL A PAGAR: </span>
-            <h2>TÉRMINOS Y CONDICIONES</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Asperiores, perspiciatis   eligendi nisi blanditiis recusandae   laboriosam minima libero doloremque, nulla    rerum unde fuga laborum ullam animi nam error  est, deserunt corrupti. Lorem ipsum dolor sit    amet consectetur, adipisicing elit. Dolore,    quibusdam sint ad ex commodi iusto sapiente,   quod quas exercitationem culpa magni illo     nisi aut libero, ut natus voluptates expedita   hic?</p>
+            <h4>Artículo</h4>
+            <h4>Descripción</h4>
+            <h4>Cantidad</h4>
+            <h4>Precio</h4>
+            <h4>Subtotal</h4>
+            <!-- Primera fila -->
+            <span>1</span>
+            <span>Pulsera artesanal con piedras</span>
+            <span>3</span>
+            <span>$500</span>
+            <span>$1500</span>
+            <!-- Segunda fila -->
+            <span>2</span>
+            <span>Holder de cadenas con dije de estrella</span>
+            <span>2</span>
+            <span>$350</span>
+            <span>$700</span>
+            <!-- Tercera fila -->
+            <span>3</span>
+            <span>Anillo con mostacillas negras</span>
+            <span>4</span>
+            <span>$150</span>
+            <span>$600</span>
+            <!-- Cuarta fila -->
+            <span>4</span>
+            <span>Gargantilla con dije en punta</span>
+            <span>1</span>
+            <span>$520</span>
+            <span>$520</span>
+            <!-- Quinta fila -->
+            <span>5</span>
+            <span>Aros con perla y strass corazón</span>
+            <span>3</span>
+            <span>$200</span>
+            <span>$600</span>
+            <!-- Sexta fila -->
+            <span>6</span>
+            <span>Pulsera de mostacillas con tanza doble</span>
+            <span>2</span>
+            <span>$250</span>
+            <span>$500</span>
+            <!-- Séptima fila -->
+            <h4>TOTAL GENERAL A PAGAR:</h4>
+            <span>$8000</span>
         </div>
+        <h2 class="tyc">TÉRMINOS Y CONDICIONES</h2>
+        <p>Lorem ipsum dolor sit amet,consectetur  adipisicing elit. Asperiores,perspiciatis   eligendi nisi blanditiisrecusandae   laboriosam minima liberodoloremque, nulla    rerum unde fugalaborum ullam animi nam error  est,deserunt corrupti. Lorem ipsum dolorsit    amet consectetur, adipisicing elit.Dolore,    quibusdam sint ad ex commodiiusto sapiente,   quod quas exercitationemculpa magni illo     nisi aut libero, utnatus voluptates expedita   hic?</p>
     </main>
     <section class="categorias">
         <h2>CATEGORIAS</h2>
@@ -127,21 +119,26 @@
         </ul>
     </section>
     <footer id="redes_sociales">
-        <ul>
-            <li>
-                <a href="https://www.facebook.com/ThaisBijouterieAccesorios" target="_blank"><img src="../Imagenes/facebook.png" alt="IconoFacebook">
-                </a>
-            </li>                    
-            <li>
-                <a href="https://www.instagram.com/thaisbijouterie1/" target="_blank"><img src="../Imagenes/instagram.png" alt="IconoInstagram"></a>
-            </li>            
-            <li>
-                <a href="https://api.whatsapp.com/send/?phone=5491130885830" target="_blank"><img src="../Imagenes/whatsapp.png" alt="IconoWhats'App"></a>
-            </li>
-        </ul>
-        <a href="#principio">SUBIR</a>
-        <p>Derechos de autor</p>
-        
+        <div class="line_footer">
+            <div class="line"></div>
+            <div class="redes">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/  ThaisBijouterieAccesorios" target="_blank"><img src="../imagenes/facebook.png" alt="IconoFacebook">
+                        </a>
+                    </li>                    
+                    <li>
+                        <a href="https://www.instagram.com/ thaisbijouterie1/" target="_blank"><img src="../imagenes/instagram.png" alt="IconoInstagram"></a>
+                    </li>            
+                    <li>
+                        <a href="https://api.whatsapp.com/send/?phone=5491130885830" target="_blank"><img src="../imagenes/whatsapp.png" alt="IconoWhats'App"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="line line2"></div>
+            <a class="volver_ini" href="#principio">VOLVER</a>
+            <h5>Derechos de autor</h5>
+        </div>
     </footer>
 </body>
 </html>

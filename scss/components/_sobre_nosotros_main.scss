@@ -1,0 +1,40 @@
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.informacion{
+    width: 500px;
+    text-align: center;   
+    align-self:center;
+    p{
+        padding: 15px;
+    }
+}
+.informacion p,  .informacion a{
+    font-size: 20px;
+    background: #C4C41E;
+    background: radial-gradient(ellipse farthest-corner at top right, #C4C41E 55%, #E8FF54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* probable extend */
+}
+
+.info_logo{
+    img{
+        width: 550px;
+        height: 550px;
+    }
+}
+.nosotros{
+    background-color: rgba(0, 0, 0, 0.801);
+}
+.maps{
+    iframe{
+        width: 450px;
+        height: 350px;
+        margin-left: 10px;
+        border: solid 2px goldenrod;
+        border-radius: 5px;
+    }
+}

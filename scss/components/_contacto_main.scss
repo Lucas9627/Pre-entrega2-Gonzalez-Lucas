@@ -1,0 +1,71 @@
+.cont img, .name_street img {
+    width: 60px;
+    height: 60px; 
+    margin-right: 30px;
+}
+.main_contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 50px;
+    grid-template-areas: 
+    "title-contact title-location"
+    "cont contacto_maps"
+    ". name_street";
+    row-gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+.title-contact{
+    grid-area: title-contact;
+}
+.title-location{
+    grid-area: title-location;
+}
+.cont{
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
+}
+.cont a{
+    margin: 25px 0;
+    font-size: 25px;
+}
+.contacto_maps{
+    grid-area: contacto_maps;
+}
+.name_street{
+    grid-area: name_street;
+}
+
+.cont a, .name_street a{
+    text-decoration: none;
+    font-family: "Merri", serif;
+    font-weight: 600;
+    color: rgb(128, 101, 29);
+}
+.name_street a{
+    font-size: 20px;
+}
+.main_contacto iframe{
+    width: 525px;
+    height: 425px;
+    border: solid 2px goldenrod;
+    border-radius: 5px;
+}
+.footer_contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 100px;
+    grid-template-areas: 
+    "line volver line2"
+    ". . copyr";
+    padding-top: 50px;
+    a{
+        grid-area: volver;
+    }
+    p{
+        grid-area: copyr;
+        place-self: end;
+        margin-right: 20px;
+    }
+}

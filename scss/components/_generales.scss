@@ -1,0 +1,21 @@
+body {
+    background-image: url(../imagenes/background_image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* ver si hacerlo con map */
+    margin-bottom: 0;
+    padding-left: 0;
+}
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    
+} 

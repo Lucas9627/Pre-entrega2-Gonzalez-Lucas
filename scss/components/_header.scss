@@ -1,0 +1,63 @@
+header{
+    display: grid;
+    grid-template-columns:  0.3fr 1fr 0.8fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+   /*  "logo busqueda login"
+    "navbar navbar navbar"; */
+    "logo busqueda login"
+    "logo navbar navbar";
+    box-sizing: border-box;
+    background-color: rgba(225, 233, 120, 0.705);
+}
+.logo{
+    grid-area: logo;
+    justify-self: center;
+}
+.imglogo {
+    width: 125px;
+    height: 125px;  
+}
+.barbusqueda{
+    grid-area: busqueda;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    button{
+        background-color: rgba(207, 230, 253, 0.753);
+        position: absolute;
+        border: 1px solid rgb(128, 101, 29);
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+    }
+}
+.boton-hambur{
+    display: none;
+}
+input {
+    width: 300px;
+    height: 32px;
+    border: 1px solid rgb(128, 101, 29);
+    border-right: none;
+    font-family: "Merri", serif;
+    font-weight: 600;
+    color: rgb(128, 101, 29);
+    background-color: rgba(207, 230, 253, 0.753);
+    outline: none; 
+    border-radius: 5px 0 0 5px;
+    padding-left: 5px;
+    
+}
+.signin_signup{
+    grid-area: login;
+    justify-self: center;
+    a{
+        display: inline-block;
+        padding: 10px 10px 0 10px;
+    }
+}
+.nav__bar{
+    grid-area: navbar;
+    padding-bottom: 10px;
+    align-self: end;
+}

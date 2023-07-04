@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* para settear toda la pagina sin ocupar espacio mas que lo que ocupe la etiqueta */
+}
+/* en style tendremos solo código importado de los partials, sin tener código adicional en sass */
+@import './base/variables.scss';
+@import './base/maps.scss';
+@import './base/mixins.scss';
+
+@import './components/generales.scss';
+@import './components/header.scss';
+@import './components/indexmain.scss';
+@import './components/categorias.scss';
+@import './components/contacto.scss';
+@import './components/footer.scss';
+@import './components/catalogo_main.scss';
+@import './components/sobre_nosotros_main.scss';
+@import './components/contacto_main.scss';
+@import './components/carrito_main.scss';

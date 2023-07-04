@@ -1,0 +1,30 @@
+.line_footer{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: auto 100px;
+    grid-template-areas: 
+    "line redes line2"
+    ". subir copyR";
+    padding-top: 40px;
+    h5{
+        grid-area: copyR;
+        place-self: end;
+        margin-right: 20px;
+    }
+}
+.line{
+    grid-area: line;
+    align-self: center;
+}
+.line2{
+    grid-area: line2;
+}
+
+.redes{
+    grid-area: redes;
+    align-self: center;
+}
+
+.gmail{
+    display: none;
+}

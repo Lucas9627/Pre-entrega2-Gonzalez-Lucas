@@ -29,17 +29,20 @@
         border: none;
         /* @extend %borde_dorado;  */   
     }
+    h2{
+        @extend %gradient_text_2;
+    }
     h4{
         margin: 0;
         @extend %borde_dorado;
         border-right: 0;
-        
+        @extend %gradient_text_2;
     }
     span{
         @extend %borde_dorado;
         border-top: 0;
         border-right: 0;
-        
+        @extend %gradient_text_2;
     }
 }
 .tyc{

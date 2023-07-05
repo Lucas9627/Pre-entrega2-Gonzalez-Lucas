@@ -28,7 +28,9 @@
     grid-area: redes;
     align-self: center;
 }
-
+.volver_ini{
+    @extend %boton_subir;
+}
 .gmail{
     display: none;
 }

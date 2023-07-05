@@ -15,6 +15,9 @@
     a{
         @extend %text_gradient_gold;
     }
+    h1{
+        @extend %gradient_text_2;
+    }
 }
 .info_logo{
     img{

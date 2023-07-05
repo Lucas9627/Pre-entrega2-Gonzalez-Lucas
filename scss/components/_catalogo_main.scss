@@ -33,6 +33,9 @@
     a{
         color: map-get($map_colores, a_carrito);
     }
+    img{
+        @extend %size_ico;
+    }
 }
 /*
 -------------------------------------------------------

@@ -29,6 +29,9 @@ header{
         border-left: none;
         border-radius: 0 5px 5px 0;
     }
+    img{
+        @extend %size_ico;
+    }
 }
 .boton-hambur{
     display: none;

@@ -42,6 +42,28 @@
   border-radius: 5px;
 }
 
+.ico_chango img, .barbusqueda img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer_contacto a, .volver_ini {
+  grid-area: subir;
+  align-self: center;
+  justify-self: center;
+  padding: 10px 20px;
+  background-color: rgba(224, 223, 141, 0.911);
+  border-radius: 5px;
+  border: 1px solid rgb(128, 101, 29);
+}
+
+.table-container span, .table-container h4, .table-container h2, .informacion h1 {
+  background: #8C8C15;
+  background: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* -------------------------------------------------------selectores compartidos*/
 body {
   background-image: url(../imagenes/background_image.jpg);
@@ -98,7 +120,6 @@ header {
   border-left: none;
   border-radius: 0 5px 5px 0;
 }
-
 .boton-hambur {
   display: none;
 }
@@ -219,7 +240,6 @@ input {
 .ico_chango a {
   color: rgb(120, 2, 255);
 }
-
 /*
 -------------------------------------------------------
 -------------------------------------------------------

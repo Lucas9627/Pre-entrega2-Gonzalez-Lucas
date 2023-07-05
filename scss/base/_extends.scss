@@ -16,7 +16,6 @@
         font-size: 18px;
     }
 }
-
 %text_gradient_gold{
     font-size: 20px;
     background: $info_text_gradient;
@@ -30,4 +29,23 @@
 %b_curve_gold{
     border: solid 2px map-get($map_colores, dorado);
     border-radius: 5px;
+}
+%size_ico{
+    width: 30px;
+    height: 30px;
+}
+%boton_subir{
+    grid-area: subir;
+    align-self: center;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: map-get($map_colores, fondo_btn_volver);
+    border-radius: 5px;
+    border: 1px solid map-get($map_colores, dorado_opaco);
+}
+%gradient_text_2{
+    background: $color_text_gradient;
+    background: repeating-radial-gradient(ellipse farthest-corner at top left, $color_text_gradient 83%, $color_text_gradient2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

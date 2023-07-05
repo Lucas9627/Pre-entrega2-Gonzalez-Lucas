@@ -59,7 +59,8 @@
     padding-top: 50px;
     a{
         grid-area: volver;
-        @extend %tipografia_merri
+        @extend %tipografia_merri;
+        @extend %boton_subir;
     }
     p{
         grid-area: copyr;

@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 15px 0 15px;
+    @extend %linea_divisora;
     h5{
         margin: 50px 0;
     }
@@ -10,5 +11,7 @@
         width: 400px;
         height: 220px;
         margin: 20px 0;
+        @extend %b_curve_gold;
     }
 }
+/* -------------------------------------------------------section contacto */

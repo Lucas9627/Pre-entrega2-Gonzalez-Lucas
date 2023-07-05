@@ -1,7 +1,7 @@
 .art_desc{
     height: 450px;
     overflow: auto;
-    border: outset 3px rgba(255, 195, 31, 0.849);
+    border: outset 3px map-get($map_colores, borde_catalogo);
     text-align: center;
     margin: 15px;
     scrollbar-width: none;
@@ -15,13 +15,15 @@
         display: flex;
         flex-direction: column;  
     }
+    a{
+        @extend %tipografia_merri;
+    }
 }
 .carrito{
-    border: solid 2px goldenrod;
-    border-radius: 5px;
+    @extend %b_curve_gold;
 }
 .catego_catalogo{
-    border-bottom: 3px solid rgb(128, 101, 29);
+    border-bottom: 3px solid map-get($map_colores, dorado_opaco);
 }
 .ico_chango{
     button{
@@ -29,6 +31,10 @@
         background-color: transparent;
     } 
     a{
-        color: rgb(120, 2, 255);
+        color: map-get($map_colores, a_carrito);
     }
 }
+/*
+-------------------------------------------------------
+-------------------------------------------------------
+ css de catalogo */

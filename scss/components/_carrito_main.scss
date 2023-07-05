@@ -1,15 +1,20 @@
 .main_carrito{
     text-align: center;
     margin: 20px;
+    p{
+        font-size: 20px;
+        margin: 20px 20px;
+        @extend %tipografia_merri;
+    }
 }
 .table-container{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     box-sizing: border-box;
-    background-color: #131312c5;
-    border: solid 1px goldenrod;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: map-get($map_colores, fondo_tabla);
+    @extend %borde_dorado;
+    box-shadow: map-get($map_colores, shadow_table) 0px 22px 70px 4px;
     & :first-child{
         grid-column-start: 1;
         grid-column-end: 6;
@@ -22,30 +27,23 @@
     }
     & :last-child{
         border: none;
-        border-left: solid 1px goldenrod;      
+        /* @extend %borde_dorado;  */   
     }
-}
-
-.table-container h4, .table-container span{
-    border: solid 1px goldenrod; 
-}
-.table-container{
     h4{
         margin: 0;
+        @extend %borde_dorado;
         border-right: 0;
+        
     }
     span{
+        @extend %borde_dorado;
         border-top: 0;
         border-right: 0;
-    }
-}
-
-.main_carrito{
-    p{
-        font-size: 20px;
-        margin: 20px 20px;
+        
     }
 }
 .tyc{
     margin-top: 40px;
 }
+/* ------------------------------------------------ */
+/* css de carrito de compras */

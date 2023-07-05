@@ -11,10 +11,14 @@
         place-self: end;
         margin-right: 20px;
     }
+    a{
+        @extend %tipografia_merri_size;
+    }
 }
 .line{
     grid-area: line;
     align-self: center;
+    @extend %linea_divisora;
 }
 .line2{
     grid-area: line2;
@@ -28,3 +32,4 @@
 .gmail{
     display: none;
 }
+/* -------------------------------------------------------footer */

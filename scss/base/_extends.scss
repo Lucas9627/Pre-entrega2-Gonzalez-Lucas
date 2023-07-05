@@ -1,0 +1,33 @@
+%borde_dorado{
+    border: solid 1px map-get($map_colores, dorado); 
+}
+
+%img_redes{
+    width: 60px;
+    height: 60px; 
+    margin-right: 30px;
+}
+%tipografia_merri{
+    font-family: "Merri", serif;
+    font-weight: 600;
+    color: map-get($map_colores, dorado_opaco);
+    &_size{
+        @extend %tipografia_merri;
+        font-size: 18px;
+    }
+}
+
+%text_gradient_gold{
+    font-size: 20px;
+    background: $info_text_gradient;
+    background: radial-gradient(ellipse farthest-corner at top right, $info_text_gradient 55%, $info_text_gradient2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+%linea_divisora{
+    border-top: 3px solid map-get($map_colores, dorado_opaco);
+}
+%b_curve_gold{
+    border: solid 2px map-get($map_colores, dorado);
+    border-radius: 5px;
+}

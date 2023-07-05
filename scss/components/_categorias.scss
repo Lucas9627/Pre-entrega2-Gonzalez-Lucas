@@ -1,7 +1,12 @@
 .categorias{
     padding: 20px 0;
+    @extend %linea_divisora;
     h2{
         text-align: center;
         margin-bottom: 20px;
     }
+    a{
+        @extend %tipografia_merri_size;
+    }
 }
+/* -------------------------------------------------------section categorias*/

@@ -6,7 +6,7 @@
 }
 
 /* en style tendremos solo código importado de los partials, sin tener código adicional en sass */
-.table-container span, .table-container h4, .table-container {
+.table-container span, .table-container h4, .table-container :last-child, .table-container {
   border: solid 1px goldenrod;
 }
 
@@ -16,12 +16,12 @@
   margin-right: 30px;
 }
 
-.main_carrito p, .footer_contacto a, .name_street a, .cont a, .art_desc a, input, h5, h2, .footer_contacto p, .line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
+.main_carrito p, .footer_contacto p, .footer_contacto a, .name_street a, .cont a, .title-contact, .art_desc a, .catalogo h1, input, h3, h2, .line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
   font-family: "Merri", serif;
   font-weight: 600;
   color: rgb(128, 101, 29);
 }
-.footer_contacto p, .line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
+.line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
   font-size: 18px;
 }
 
@@ -235,7 +235,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   justify-content: space-around;
   padding: 20px 15px 0 15px;
 }
-.contacto h5 {
+.contacto h3 {
   margin: 50px 0;
 }
 .contacto iframe {
@@ -253,7 +253,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   grid-template-areas: "line redes line2" ". subir copyR";
   padding-top: 40px;
 }
-.line_footer h5 {
+.line_footer h3 {
   grid-area: copyR;
   place-self: end;
   margin-right: 20px;
@@ -277,6 +277,10 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 }
 
 /* -------------------------------------------------------footer */
+.catalogo h1 {
+  margin: 15px 0 0 15px;
+}
+
 .art_desc {
   height: 450px;
   overflow: auto;
@@ -323,6 +327,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   width: 500px;
   text-align: center;
   align-self: center;
+  margin: 30px 0;
 }
 .informacion p {
   padding: 15px;
@@ -356,6 +361,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 
 .title-contact {
   grid-area: title-contact;
+  font-size: calc(1.325rem + 0.9vw);
 }
 
 .title-location {
@@ -399,6 +405,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   grid-area: copyr;
   place-self: end;
   margin-right: 20px;
+  font-size: calc(1.3rem + 0.6vw);
 }
 
 /* ------------------------------------------ */
@@ -430,10 +437,12 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   grid-column-end: 5;
   justify-self: end;
   border: none;
+  padding-right: 5px;
 }
 .table-container :last-child {
-  border: none;
-  /* @extend %borde_dorado;  */
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
 .table-container h4 {
   margin: 0;
@@ -497,7 +506,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   .categorias, .contacto, #redes_sociales {
     background-color: transparent;
   }
-  .categorias h2, .contacto h2 {
+  .categorias h2, .contacto h2, .catalogo h1 {
     font-size: 38px;
   }
   .categorias a {
@@ -514,8 +523,9 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   }
   .contacto iframe {
     width: 95vw;
+    height: 50vh;
   }
-  .index_visita h5 {
+  .index_visita h3 {
     display: inline-block;
     margin-top: 0;
     font-size: 23px;
@@ -537,19 +547,22 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
     height: 105px;
     width: 95px;
   }
-  .line_footer h5 {
+  .line_footer h3 {
     place-self: center;
     padding-top: 20px;
-    font-size: 23px;
+    font-size: 30px;
   }
   /* media query de catalogo */
+  .catalogo h1 {
+    text-align: center;
+  }
   .art_desc ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
   }
   .art_desc span, .art_desc a {
-    font-size: 20px;
+    font-size: 25px;
   }
   .ico_chango button, .art_desc {
     background-color: transparent;

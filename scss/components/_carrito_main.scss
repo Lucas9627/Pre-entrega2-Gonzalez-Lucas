@@ -21,11 +21,14 @@
         grid-column-start: 1;
         grid-column-end: 5;
         justify-self: end;
-        border:none;    
+        border:none;
+        padding-right: 5px;    
     }
     & :last-child{
-        border: none;
-        /* @extend %borde_dorado;  */   
+        @extend %borde_dorado; 
+        border-top: none;
+        border-right: none;
+        border-bottom: none;       
     }
     h1{
         @extend %gradient_text_2;

@@ -1,8 +1,6 @@
 header{
     @include layout_grid(grid, 0.3fr 1fr 0.8fr, auto auto, 0);
     grid-template-areas: 
-   /*  "logo busqueda login"
-    "navbar navbar navbar"; */
     "logo busqueda login"
     "logo navbar navbar";
     box-sizing: border-box;

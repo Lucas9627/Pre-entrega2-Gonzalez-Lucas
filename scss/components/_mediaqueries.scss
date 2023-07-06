@@ -34,10 +34,12 @@
     :not(.boton-hambur)+.boton-hambur:active{
         background-color: map-get($map_colores, btn_hambur_active);
     }
-    .list-hambur a{
+    .list-hambur {
+        a{
         color: map-get($map_colores, ico_hambur);
         font-family: "Merri", serif;
         font-weight: 600;
+        }
     }
     .carrusel-img img{
         height: 435px;
@@ -45,25 +47,28 @@
     .categorias, .contacto, #redes_sociales{
         background-color: transparent;
     }
-    .categorias h2, .contacto h2{
+    .categorias h2, .contacto h2, .catalogo h1{
         font-size: 38px;
     }
-    .categorias a{
-        font-size: 25px;
-    }
-    .categorias ul{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
+    .categorias{
+        a{
+            font-size: 25px;
+        }
+        ul{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    } 
     .contacto{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        iframe{
+            width: 95vw;
+            height: 50vh;
+        }
     }
-    .contacto iframe{
-        width: 95vw;
-    }
-    .index_visita h5{
+    .index_visita h3{
         display: inline-block;
         margin-top: 0;
         font-size: 23px;
@@ -85,23 +90,27 @@
         height: 105px;
         width: 95px;
     }
-    .line_footer h5{
+    .line_footer h3{
         place-self: center;
         padding-top: 20px;
-        font-size: 23px;
+        font-size: 30px;
     }
     /* media query de catalogo */
+    .catalogo{
+        h1{
+            text-align: center;
+        }
+    }
     .art_desc ul{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
     .art_desc span, .art_desc a{
-        font-size: 20px;
+        font-size: 25px;
     }
     .ico_chango button, .art_desc{
         background-color: transparent;
     }
 }
-
 

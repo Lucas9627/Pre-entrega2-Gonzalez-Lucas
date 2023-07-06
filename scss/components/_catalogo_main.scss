@@ -1,3 +1,7 @@
+.catalogo h1{
+    margin: 15px 0 0 15px;
+    @extend %tipografia_merri;
+}
 .art_desc{
     height: 450px;
     overflow: auto;

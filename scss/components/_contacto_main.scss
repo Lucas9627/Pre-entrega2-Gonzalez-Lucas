@@ -9,6 +9,7 @@
     row-gap: 20px;
     align-items: center;
     padding: 20px;
+    @extend %fondo_azulejo;
     iframe{
         width: 525px;
         height: 425px;
@@ -57,6 +58,7 @@
     "line volver line2"
     ". . copyr";
     padding-top: 50px;
+    @extend %fondo_azulejo;
     a{
         grid-area: volver;
         @extend %tipografia_merri;

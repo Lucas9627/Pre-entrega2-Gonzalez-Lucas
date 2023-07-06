@@ -4,6 +4,7 @@
     justify-content: space-around;
     padding: 20px 15px 0 15px;
     @extend %linea_divisora;
+    @extend %fondo_azulejo;
     h5{
         margin: 50px 0;
     }

@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
+    overflow-x: hidden;
 }
 ul{
     display: flex;
@@ -32,5 +33,22 @@ h5{
 }
 main{
     @extend %linea_divisora;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
 }
 /* -------------------------------------------------------general */

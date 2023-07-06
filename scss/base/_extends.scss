@@ -18,7 +18,6 @@
 }
 %text_gradient_gold{
     font-size: 20px;
-    background: $info_text_gradient;
     background: radial-gradient(ellipse farthest-corner at top right, $info_text_gradient 55%, $info_text_gradient2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -44,8 +43,12 @@
     border: 1px solid map-get($map_colores, dorado_opaco);
 }
 %gradient_text_2{
-    background: $color_text_gradient;
-    background: repeating-radial-gradient(ellipse farthest-corner at top left, $color_text_gradient 83%, $color_text_gradient2 100%);
+    background-image: repeating-radial-gradient(ellipse farthest-corner at top left, $color_text_gradient 83%, $color_text_gradient2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: animate 3s infinite;
+}
+%fondo_azulejo{
+    background-color: map-get($map_colores, fondo_azulcristal);
 }

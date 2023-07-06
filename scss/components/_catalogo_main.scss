@@ -5,6 +5,7 @@
     text-align: center;
     margin: 15px;
     scrollbar-width: none;
+    @extend %fondo_azulejo;
     ul{
         display: grid;
         grid-template-columns: repeat(3, 1fr);

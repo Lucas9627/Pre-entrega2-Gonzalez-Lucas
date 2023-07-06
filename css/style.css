@@ -27,7 +27,6 @@
 
 .informacion a, .informacion p {
   font-size: 20px;
-  background: #C4C41E;
   background: radial-gradient(ellipse farthest-corner at top right, #C4C41E 55%, #E8FF54 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,10 +57,15 @@
 }
 
 .table-container span, .table-container h4, .table-container h2, .informacion h1 {
-  background: #8C8C15;
-  background: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
+  background-image: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  animation: animate 3s infinite;
+}
+
+.footer_contacto, .main_contacto, .art_desc, #redes_sociales, .contacto, .categorias {
+  background-color: rgba(160, 255, 239, 0.418);
 }
 
 /* -------------------------------------------------------selectores compartidos*/
@@ -70,6 +74,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 ul {
@@ -88,6 +93,23 @@ a {
   text-decoration: none;
 }
 
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 /* -------------------------------------------------------general */
 header {
   display: grid;
@@ -116,7 +138,8 @@ header {
 }
 .barbusqueda button {
   background-color: rgba(207, 230, 253, 0.753);
-  border: 1px solid;
+  position: absolute;
+  border: 1px solid rgb(128, 101, 29);
   border-left: none;
   border-radius: 0 5px 5px 0;
 }
@@ -138,10 +161,11 @@ input {
 .signin_signup {
   grid-area: login;
   justify-self: center;
+  margin-top: 15px;
 }
 .signin_signup a {
   display: inline-block;
-  padding: 10px 10px 0 10px;
+  margin: 0 20px;
 }
 
 .nav__bar {
@@ -149,6 +173,44 @@ input {
   padding-bottom: 10px;
   align-self: end;
 }
+header a {
+  position: relative;
+  padding: 0.3em 0.4em;
+  transition: all 0.35s ease;
+  display: inline-block;
+}
+header a:hover {
+  transform: scale(1.2);
+}
+header a:not(.logo a):before, header a:not(.logo a):after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+header a:not(.logo a):before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 3px solid goldenrod;
+  border-right: 3px solid rgb(128, 101, 29);
+  transform: translate(-100%, 50%);
+}
+header a:not(.logo a):after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid rgb(128, 101, 29);
+  border-left: 3px solid goldenrod;
+  transform: translate(100%, -50%);
+}
+header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
 /* -------------------------------------------------------header */
 .carrusel-img img { /*imagenes para carrousel */
   height: 525px;

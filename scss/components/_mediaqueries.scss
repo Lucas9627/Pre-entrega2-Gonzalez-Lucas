@@ -1,0 +1,107 @@
+@include breakpoint(){
+    body{
+        background-image: url(../imagenes/fondo_mobile.png.jpg);
+    }
+    header{
+        display: flex;
+        background-color:transparent;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda{
+        display: none;
+    }
+    .boton-hambur{
+        display: inline-block;
+        background-color: map-get($map_colores, btn_hambur_noactive);
+        span{
+            color: map-get($map_colores, ico_hambur);
+            font-size: 25px;
+        }
+    }
+    .dropdown-toggle{
+        width: 70px;
+        height: 55px;
+    }
+    .boton-hambur:hover, .list-hambur{
+        background-color: map-get($map_colores, btn_hambur_active);
+    }
+    .boton-hambur:checked+.boton-hambur, 
+    .boton-hambur.active, 
+    .boton-hambur.show, 
+    .boton-hambur:first-child:active, 
+    :not(.boton-hambur)+.boton-hambur:active{
+        background-color: map-get($map_colores, btn_hambur_active);
+    }
+    .list-hambur a{
+        color: map-get($map_colores, ico_hambur);
+        font-family: "Merri", serif;
+        font-weight: 600;
+    }
+    .carrusel-img img{
+        height: 435px;
+    }
+    .categorias, .contacto, #redes_sociales{
+        background-color: transparent;
+    }
+    .categorias h2, .contacto h2{
+        font-size: 38px;
+    }
+    .categorias a{
+        font-size: 25px;
+    }
+    .categorias ul{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .contacto{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contacto iframe{
+        width: 95vw;
+    }
+    .index_visita h5{
+        display: inline-block;
+        margin-top: 0;
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+    .line_footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .redes li{
+        display: flex;
+    }
+    .redes{
+        align-self: normal;
+    }
+    .gmail img{
+        height: 105px;
+        width: 95px;
+    }
+    .line_footer h5{
+        place-self: center;
+        padding-top: 20px;
+        font-size: 23px;
+    }
+    /* media query de catalogo */
+    .art_desc ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .art_desc span, .art_desc a{
+        font-size: 20px;
+    }
+    .ico_chango button, .art_desc{
+        background-color: transparent;
+    }
+}
+
+

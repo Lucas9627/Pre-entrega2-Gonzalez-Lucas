@@ -1,7 +1,5 @@
 .nosotros{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include layout_flex(flex, row, wrap, space-around);
     background-color: map-get($map_colores, fondo_info);
 }
 .informacion{

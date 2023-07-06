@@ -7,9 +7,7 @@
     scrollbar-width: none;
     @extend %fondo_azulejo;
     ul{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        @include layout_grid(grid, repeat(3, 1fr), auto, 1rem);
         padding: 10px;
     }
     li{

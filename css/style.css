@@ -56,7 +56,7 @@
   border: 1px solid rgb(128, 101, 29);
 }
 
-.table-container span, .table-container h4, .table-container h2, .informacion h1 {
+.table-container span, .table-container h4, .table-container h1, .informacion h1 {
   background-image: repeating-radial-gradient(ellipse farthest-corner at top left, #8C8C15 83%, #E8FF54 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,8 +79,9 @@ body {
 
 ul {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around; /* ver si hacerlo con map */
+  justify-content: space-around;
   margin-bottom: 0;
   padding-left: 0;
 }
@@ -115,6 +116,7 @@ header {
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.8fr;
   grid-template-rows: auto auto;
+  gap: 0;
   grid-template-areas: "logo busqueda login" "logo navbar navbar";
   box-sizing: border-box;
   background-color: rgba(225, 233, 120, 0.705);
@@ -229,6 +231,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 .contacto {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
   padding: 20px 15px 0 15px;
 }
@@ -246,6 +249,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   grid-template-rows: auto 100px;
+  gap: 0;
   grid-template-areas: "line redes line2" ". subir copyR";
   padding-top: 40px;
 }
@@ -284,6 +288,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 .art_desc ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 1rem;
   padding: 10px;
 }
@@ -308,6 +313,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
  css de catalogo */
 .nosotros {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.801);
@@ -338,8 +344,8 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 50px;
+  gap: 20px;
   grid-template-areas: "title-contact title-location" "cont contacto_maps" ". name_street";
-  row-gap: 20px;
   align-items: center;
   padding: 20px;
 }
@@ -380,8 +386,9 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 
 .footer_contacto {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 100px;
+  gap: 0;
   grid-template-areas: "line volver line2" ". . copyr";
   padding-top: 50px;
 }
@@ -407,8 +414,9 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 
 .table-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr repeat(3, 1fr);
   grid-template-rows: auto;
+  gap: 0;
   box-sizing: border-box;
   background-color: rgba(19, 19, 18, 0.7725490196);
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -442,5 +450,110 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 
 /* ------------------------------------------------ */
 /* css de carrito de compras */
+@media screen and (max-width: 576px) {
+  body {
+    background-image: url(../imagenes/fondo_mobile.png.jpg);
+  }
+  header {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda {
+    display: none;
+  }
+  .boton-hambur {
+    display: inline-block;
+    background-color: rgba(133, 221, 250, 0.9058823529);
+  }
+  .boton-hambur span {
+    color: aliceblue;
+    font-size: 25px;
+  }
+  .dropdown-toggle {
+    width: 70px;
+    height: 55px;
+  }
+  .boton-hambur:hover, .list-hambur {
+    background-color: #5fc8ec;
+  }
+  .boton-hambur:checked + .boton-hambur,
+  .boton-hambur.active,
+  .boton-hambur.show,
+  .boton-hambur:first-child:active,
+  :not(.boton-hambur) + .boton-hambur:active {
+    background-color: #5fc8ec;
+  }
+  .list-hambur a {
+    color: aliceblue;
+    font-family: "Merri", serif;
+    font-weight: 600;
+  }
+  .carrusel-img img {
+    height: 435px;
+  }
+  .categorias, .contacto, #redes_sociales {
+    background-color: transparent;
+  }
+  .categorias h2, .contacto h2 {
+    font-size: 38px;
+  }
+  .categorias a {
+    font-size: 25px;
+  }
+  .categorias ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .contacto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contacto iframe {
+    width: 95vw;
+  }
+  .index_visita h5 {
+    display: inline-block;
+    margin-top: 0;
+    font-size: 23px;
+    letter-spacing: 1px;
+  }
+  .line_footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .redes li {
+    display: flex;
+  }
+  .redes {
+    align-self: normal;
+  }
+  .gmail img {
+    height: 105px;
+    width: 95px;
+  }
+  .line_footer h5 {
+    place-self: center;
+    padding-top: 20px;
+    font-size: 23px;
+  }
+  /* media query de catalogo */
+  .art_desc ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .art_desc span, .art_desc a {
+    font-size: 20px;
+  }
+  .ico_chango button, .art_desc {
+    background-color: transparent;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

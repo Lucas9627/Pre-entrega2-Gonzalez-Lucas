@@ -1,0 +1,23 @@
+@mixin breakpoint($max-width: 576px){
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+@mixin layout_flex($dsp, $flex-d, $wrap, $just_or_align){
+    display: $dsp;
+    flex-direction: $flex-d;
+    flex-wrap: $wrap;
+    @if $flex-d == row {
+        justify-content: $just_or_align;
+    }@else {
+        @if $flex-d == column{ 
+        align-items: $just_or_align;
+        }
+    }
+}
+@mixin layout_grid($dsp, $grid-col, $grid-row, $gap){
+    display: $dsp;
+    grid-template-columns: $grid-col;
+    grid-template-rows: $grid-row;
+    gap: $gap;
+}

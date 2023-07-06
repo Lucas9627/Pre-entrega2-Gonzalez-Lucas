@@ -8,9 +8,7 @@ body {
     overflow-x: hidden;
 }
 ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* ver si hacerlo con map */
+    @include layout_flex(flex, row, wrap, space-around);
     margin-bottom: 0;
     padding-left: 0;
 }

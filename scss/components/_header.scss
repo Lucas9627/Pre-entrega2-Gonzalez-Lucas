@@ -1,7 +1,5 @@
 header{
-    display: grid;
-    grid-template-columns:  0.3fr 1fr 0.8fr;
-    grid-template-rows: auto auto;
+    @include layout_grid(grid, 0.3fr 1fr 0.8fr, auto auto, 0);
     grid-template-areas: 
    /*  "logo busqueda login"
     "navbar navbar navbar"; */

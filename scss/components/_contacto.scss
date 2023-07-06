@@ -1,7 +1,5 @@
 .contacto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include layout_flex(flex, row, nowrap, space-around);
     padding: 20px 15px 0 15px;
     @extend %linea_divisora;
     @extend %fondo_azulejo;

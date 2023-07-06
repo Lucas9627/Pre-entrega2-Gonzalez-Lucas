@@ -2,9 +2,7 @@
     @extend %fondo_azulejo;
 }
 .line_footer{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: auto 100px;
+    @include layout_grid(grid, 0.5fr 1fr 0.5fr, auto 100px, 0);
     grid-template-areas: 
     "line redes line2"
     ". subir copyR";

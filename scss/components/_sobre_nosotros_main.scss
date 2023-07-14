@@ -1,9 +1,9 @@
 .nosotros{
-    @include layout_flex(flex, row, wrap, space-around);
+    @include layout_flex(flex, row, wrap, space-evenly);
     background-color: map-get($map_colores, fondo_info);
 }
 .informacion{
-    width: 500px;
+    width: 27rem;
     text-align: center;   
     align-self:center;
     margin: 30px 0;
@@ -13,15 +13,16 @@
     }
     a{
         @extend %text_gradient_gold;
+        @extend %trans_scale_enlace;
     }
     h1{
         @extend %gradient_text_2;
     }
 }
 .info_logo{
+    align-self: center;
     img{
-        width: 550px;
-        height: 550px;
+        width: 50vw;
     }
 }
 .maps{

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Antes de realizar una compra, lea atentamente los términos y condiciones de nuestra página, sujeto tanto a compras minoristas como mayoristas.">
-    <meta name="keywords" content="terminos y condiciones, mayorista, minorista, carrito de compra, catalogo, compra, venta, envíos a todo el país">
+    <meta name="keywords" content="terminos y condiciones, mayorista, minorista, carrito de compra, catalogo, compra, venta, envíos a todo el paísp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="shortcut icon" href="../Imagenes/favicon_360x360.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
@@ -23,10 +22,39 @@
             <input type="text" placeholder="Barra de Búsqueda">
             <button><img src="../imagenes/icono_busqueda.png" alt="icono_lupa"></button>
         </div><!-- UNA BARRA DE BUSQUEDA -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle boton-hambur" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>&#9776;</span>
+            </button>
+            <ul class="dropdown-menu list-hambur">
+                <li>
+                    <a class="dropdown-item" href="#">INICIAR SESIÓN</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">REGISTRARSE</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="../index.html">INICIO</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">CATALOGO</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="contacto.html">CONTACTO</a>
+                </li> 
+                <li>
+                    <a class="dropdown-item" href="carrito_compras.html">CARRITO DE COMPRAS</a>
+                </li>
+            </ul>
+          </div>       
+        </div>
         <div class="signin_signup">
-                <a href="">INICIAR SESION</a><!-- PARA LOGEARSE -->
-                <a href="">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
-        </div><!-- PARA EL LOGIN Y REGISTRARSE. AUN NO SE HA LINKEADO NADA -->
+                <a href="ingresar.html">INGRESAR</a><!-- PARA LOGEARSE -->
+                <a href="registrarse.html">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
+        </div>
         <nav class="nav__bar">
             <ul>
                 <li>
@@ -37,7 +65,10 @@
                     <a href="catalogo.html">CATALOGO</a><!-- ME LLEVARA A LA PAGINA DE CATALOGO -->
                 </li>
                 <li>
-                    <a href="sobre_nosotros.html">SOBRE NOSOTROS</a><!-- ME LLEVARA A LA SECCION DE INFORMACION DE LA MARCA -->
+                    <a href="sobre_nosotros.html">
+                        <span>SOBRE</span>
+                        <span>NOSOTROS</span>
+                    </a><!-- ME LLEVARA A LA SECCION DE INFORMACION DE LA MARCA -->
                 </li>
             
                 <li>
@@ -45,7 +76,10 @@
                 </li>
             
                 <li>
-                    <a href="carrito_compras.html">CARRITO DE COMPRAS</a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
+                    <a href="carrito_compras.html">
+                        <span>CARRITO</span>
+                        <span>DE COMPRAS</span>
+                    </a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
                 </li>
                 </ul>
             </nav>
@@ -127,6 +161,28 @@
                 <a href="catalogo.html">AROS</a>
             </li>            
         </ul>
+        <div class="dropdown"><!-- MENU HAMBURGUESA -->
+            <button class="btn btn-secondary dropdown-toggle boton-hambur" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>&#9776;</span>
+            </button>
+            <ul class="dropdown-menu list-hambur">
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">ANILLOS</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">PULSERAS</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">SUJETA-ANTEOJOS</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">COLLARES</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="catalogo.html">AROS</a>
+                </li>
+            </ul>
+        </div>
     </section>
     <footer id="redes_sociales">
         <div class="line_footer">
@@ -143,6 +199,10 @@
                     <li>
                         <a href="https://api.whatsapp.com/send/?phone=5491130885830" target="_blank"><img src="../imagenes/whatsapp.png" alt="IconoWhats'App"></a>
                     </li>
+                    <li class="gmail">
+                        <a href="#" target="_blank"><img src="../imagenes/gmail.png" alt="Icono G-Mail">
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="line line2"></div>
@@ -150,5 +210,6 @@
             <h3>Derechos de autor</h3>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

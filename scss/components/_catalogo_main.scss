@@ -1,25 +1,32 @@
-.catalogo h1{
-    margin: 15px 0 0 15px;
+.catalogo{
+    @extend %fondo_azulejo;
+    h1{
     @extend %tipografia_merri;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    }
 }
 .art_desc{
-    height: 450px;
-    overflow: auto;
-    border: outset 3px map-get($map_colores, borde_catalogo);
     text-align: center;
-    margin: 15px;
-    scrollbar-width: none;
+    padding: 0.2rem;
     @extend %fondo_azulejo;
     ul{
-        @include layout_grid(grid, repeat(3, 1fr), auto, 1rem);
-        padding: 10px;
+        @include layout_flex(flex, row, wrap, space-around);
+        padding: 1em;
     }
     li{
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
+        padding: 1em 0;
     }
     a{
         @extend %tipografia_merri;
+        font-size: 1.2em;
+        @extend %trans_scale_enlace;
+    }
+    span{
+        font-size: 1.2em;
     }
 }
 .carrito{
@@ -32,6 +39,7 @@
     button{
         border: none;
         background-color: transparent;
+        @extend %trans_scale_enlace;
     } 
     a{
         color: map-get($map_colores, a_carrito);

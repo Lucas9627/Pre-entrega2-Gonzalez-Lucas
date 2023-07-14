@@ -5,20 +5,37 @@ header{
     "logo navbar navbar";
     box-sizing: border-box;
     background-color: map-get($map_colores, fondo_header);
+    padding-right: 0.5rem;
 }
 .logo{
     grid-area: logo;
     justify-self: center;
+    @extend %trans_scale_enlace;
 }
 .imglogo {
-    width: 125px;
-    height: 125px;  
+    width: 8rem;
+    height: 8rem;  
 }
 .barbusqueda{
     grid-area: busqueda;
     align-self: center;
     justify-self: center;
     position: relative;
+    width: 70%;
+    img{
+        @extend %size_ico;
+    }
+    input {
+        width: 100%;
+        height: 32px;
+        border: 1px solid map-get($map_colores, dorado_opaco);
+        border-right: none;
+        @extend %tipografia_merri;
+        background-color: map-get($map_colores, fondo_input);
+        outline: none; 
+        border-radius: 5px 0 0 5px;
+        padding-left: 5px;     
+    }
     button{
         background-color:  map-get($map_colores, fondo_input);
         position: absolute;
@@ -26,79 +43,36 @@ header{
         border-left: none;
         border-radius: 0 5px 5px 0;
     }
-    img{
-        @extend %size_ico;
-    }
 }
 .boton-hambur{
     display: none;
 }
-input {
-    width: 300px;
-    height: 32px;
-    border: 1px solid map-get($map_colores, dorado_opaco);
-    border-right: none;
-    @extend %tipografia_merri;
-    background-color: map-get($map_colores, fondo_input);
-    outline: none; 
-    border-radius: 5px 0 0 5px;
-    padding-left: 5px;
-    
-}
 .signin_signup{
     grid-area: login;
-    justify-self: center;
-    margin-top: 15px;
+    justify-self: end;
+    margin-top: 10px;
     a{
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 0.4rem;
         @extend %tipografia_merri_size;
+        @extend %trans_scale_enlace_after;
     }
 }
 .nav__bar{
     grid-area: navbar;
-    padding-bottom: 10px;
+    padding: 0 15px 10px 0;
     align-self: end;
+    li{
+        display: flex;
+        align-items: center;
+    }
     a{
         @extend %tipografia_merri_size;
-    }
-}
-header a{
-    position: relative;
-    padding: .3em .4em;
-    transition: all .35s ease;
-    display: inline-block;
-    &:hover{
-        transform: scale(1.2);
-    }
-    &:not(.logo a){
-        &:before, &:after{
-        content: '';
-        height: 14px;
-        width: 14px;
-        position: absolute;
-        transition: all .35s ease;
-        opacity: 0;
-        }
-        &:before{
-            content: '';
-            right: 0;
-            top: 0;
-            border-top: 3px solid map-get($map_colores, dorado);
-            border-right: 3px solid map-get($map_colores, dorado_opaco);
-            transform: translate(-100%, 50%);
-        }
-        &:after{
-            content: '';
-            left: 0;
-            bottom: 0;
-            border-bottom: 3px solid map-get($map_colores, dorado_opaco);
-            border-left: 3px solid map-get($map_colores, dorado);
-            transform: translate(100%, -50%);
-        }
-        &:hover::before, &:hover::after{
-            transform: translate(0,0);
-            opacity: 1;
+        @extend %trans_scale_enlace_after;
+        span{
+            display: block;
+            text-align: center;
+
         }
     }
 }

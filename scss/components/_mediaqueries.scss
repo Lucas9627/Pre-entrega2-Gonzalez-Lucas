@@ -9,9 +9,6 @@
         align-items: center;
         padding: 0 20px;
     }
-    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda{
-        display: none;
-    }
     .boton-hambur{
         display: inline-block;
         background-color: map-get($map_colores, btn_hambur_noactive);
@@ -36,28 +33,34 @@
     }
     .list-hambur {
         a{
-        color: map-get($map_colores, ico_hambur);
-        font-family: "Merri", serif;
-        font-weight: 600;
+            color: map-get($map_colores, ico_hambur);
+            font-family: "Merri", serif;
+            font-weight: 600;
+            transition: all .35s ease;
+            &:hover{
+                color: aliceblue;
+                background-color: rgba(120, 90, 252, 0.884);
+                transform: scale(1.12);
+            }
         }
     }
     .carrusel-img img{
         height: 435px;
     }
-    .categorias, .contacto, #redes_sociales{
-        background-color: transparent;
+    .categorias, .contacto, #redes_sociales, .main_contacto, .footer_contacto{
+        background-color: transparent;/* selectores compartidos */
     }
-    .categorias h2, .contacto h2, .catalogo h1{
-        font-size: 38px;
+    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda, .categorias ul, .cont span, .footer_contacto a{
+        display: none; /* selectores compartidos */
+    }
+    .categorias h2, .contacto h2{
+        font-size: 8.7vw;
     }
     .categorias{
-        a{
-            font-size: 25px;
-        }
-        ul{
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
     } 
     .contacto{
         flex-direction: column;
@@ -80,15 +83,16 @@
         flex-wrap: wrap;
         align-items: center;
     }
-    .redes li{
-        display: flex;
-    }
     .redes{
         align-self: normal;
-    }
-    .gmail img{
-        height: 105px;
-        width: 95px;
+        
+        li{
+            display: flex;
+        }
+        img{
+            height: 5rem;
+            width: 5rem;
+        }
     }
     .line_footer h3{
         place-self: center;
@@ -99,6 +103,7 @@
     .catalogo{
         h1{
             text-align: center;
+            font-size: 32px;
         }
     }
     .art_desc ul{
@@ -111,6 +116,63 @@
     }
     .ico_chango button, .art_desc{
         background-color: transparent;
+    }
+    /* media query de sobre nosotros */
+    .nosotros img{
+        width: 85vw;
+    }
+    /* media query de contacto */
+    .main_contacto{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 0 1rem;
+        align-items: normal;
+        gap: 1.3rem;
+        margin-bottom: 3rem;
+        .cont{
+            flex-direction: row;
+            justify-content: space-between;
+            img{
+                width: 18vw;
+            }
+        }
+        iframe{
+            width: 93vw;
+        }     
+        .name_street{
+            display: flex;
+            flex-direction: row;
+            img{
+                width: 15vw;
+            }
+            span{
+                font-size: 4.7vw;
+            }
+        }
+    }
+    .footer_contacto {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        p{
+            display: inline-block;
+            margin-right: 0;
+        }
+    }
+    /* media querie carrito */
+    .main_carrito{
+        margin: 0;
+    }
+    .table-container{
+        h1{
+            font-size: 8vw;
+        }
+        h4{
+            font-size: 4.5vw;
+        }
+        span{
+            font-size: 4.5vw;
+        }
     }
 }
 

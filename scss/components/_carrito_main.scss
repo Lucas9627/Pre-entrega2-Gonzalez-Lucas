@@ -16,6 +16,7 @@
     & :first-child{
         grid-column-start: 1;
         grid-column-end: 6;
+        border: 0;
     }
     & :nth-last-child(2){
         grid-column-start: 1;
@@ -25,26 +26,30 @@
         padding-right: 5px;    
     }
     & :last-child{
-        @extend %borde_dorado; 
         border-top: none;
         border-right: none;
         border-bottom: none;       
     }
     h1{
         @extend %gradient_text_2;
+        font-size: 5vw;
+        @extend %borde_dorado;
     }
     h4{
         margin: 0;
-        @extend %borde_dorado;
         border-right: 0;
         @extend %gradient_text_2;
+        font-size: 4vw;
+        @extend %borde_dorado;
     }
     span{
         @extend %borde_dorado;
         border-top: 0;
         border-right: 0;
         @extend %gradient_text_2;
+        font-size: 3.2vw;
     }
+    
 }
 .tyc{
     margin-top: 40px;

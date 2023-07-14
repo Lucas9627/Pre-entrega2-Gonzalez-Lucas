@@ -12,9 +12,6 @@
         place-self: end;
         margin-right: 20px;
     }
-    a{
-        @extend %tipografia_merri_size;
-    }
 }
 .line{
     grid-area: line;
@@ -28,9 +25,20 @@
 .redes{
     grid-area: redes;
     align-self: center;
+    img{
+        width: 5em;
+        height: 5em;
+    }
+    a{
+        @extend %trans_scale_enlace;
+    }
 }
 .volver_ini{
+    @extend %tipografia_merri_size;
     @extend %boton_subir;
+    a{
+        @extend %trans_scale_enlace;
+    }
 }
 .gmail{
     display: none;

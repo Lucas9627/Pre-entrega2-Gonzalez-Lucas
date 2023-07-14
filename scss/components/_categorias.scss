@@ -4,10 +4,16 @@
     @extend %fondo_azulejo;
     h2{
         text-align: center;
-        margin-bottom: 20px;
+        margin: 0;
     }
     a{
-        @extend %tipografia_merri_size;
+        &:not(.list-hambur a){
+            @extend %tipografia_merri_size;
+            @extend %trans_scale_enlace_after;
+        }
     }
+}
+.boton-hambur{
+    display: none;
 }
 /* -------------------------------------------------------section categorias*/

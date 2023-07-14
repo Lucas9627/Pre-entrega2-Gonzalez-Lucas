@@ -6,23 +6,61 @@
 }
 
 /* en style tendremos solo código importado de los partials, sin tener código adicional en sass */
-.table-container span, .table-container h4, .table-container :last-child, .table-container {
+.table-container span, .table-container h4, .table-container h1, .table-container {
   border: solid 1px goldenrod;
 }
 
 .name_street img, .cont img {
-  width: 60px;
-  height: 60px;
-  margin-right: 30px;
+  width: 5.5vw;
+  margin-right: 1.3vw;
 }
 
-.main_carrito p, .footer_contacto p, .footer_contacto a, .name_street a, .cont a, .title-contact, .art_desc a, .catalogo h1, input, h3, h2, .line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
+.name_street img, .cont span, .cont img, .informacion a, .ico_chango button, .art_desc a, .volver_ini a, .redes a, .logo, .categorias a:not(.list-hambur a), .nav__bar a, .signin_signup a {
+  position: relative;
+  transition: all 0.35s ease;
+  display: inline-block;
+  padding: 0.3em 0.4em;
+}
+.name_street img:hover, .cont span:hover, .cont img:hover, .informacion a:hover, .ico_chango button:hover, .art_desc a:hover, .volver_ini a:hover, .redes a:hover, .logo:hover, .categorias a:hover:not(.list-hambur a), .nav__bar a:hover, .signin_signup a:hover {
+  transform: scale(1.12);
+}
+
+.categorias a:not(.list-hambur a):before, .nav__bar a:before, .signin_signup a:before, .categorias a:not(.list-hambur a):after, .nav__bar a:after, .signin_signup a:after {
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.categorias a:not(.list-hambur a):before, .nav__bar a:before, .signin_signup a:before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 0.2em solid goldenrod;
+  border-right: 0.2em solid rgba(104, 76, 0, 0.95);
+  transform: translate(-1em, 0.5em);
+}
+.categorias a:not(.list-hambur a):after, .nav__bar a:after, .signin_signup a:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 0.2em solid rgba(104, 76, 0, 0.95);
+  border-left: 0.2em solid goldenrod;
+  transform: translate(1em, -0.5em);
+}
+.categorias a:hover:not(.list-hambur a)::before, .nav__bar a:hover::before, .signin_signup a:hover::before, .categorias a:hover:not(.list-hambur a)::after, .nav__bar a:hover::after, .signin_signup a:hover::after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.main_carrito p, .footer_contacto p, .footer_contacto a, .name_street span, .cont span, .title-contact, .art_desc a, .catalogo h1, .barbusqueda input, h3, h2, .volver_ini, .categorias a:not(.list-hambur a), .nav__bar a, .signin_signup a, span {
   font-family: "Merri", serif;
   font-weight: 600;
-  color: rgb(128, 101, 29);
+  color: rgba(104, 76, 0, 0.95);
 }
-.line_footer a, .categorias a, .nav__bar a, .signin_signup a, span {
-  font-size: 18px;
+.volver_ini, .categorias a:not(.list-hambur a), .nav__bar a, .signin_signup a, span {
+  font-size: 1.8vw;
 }
 
 .informacion a, .informacion p {
@@ -33,7 +71,7 @@
 }
 
 .line, .contacto, .categorias, main {
-  border-top: 3px solid rgb(128, 101, 29);
+  border-top: 3px solid rgba(104, 76, 0, 0.95);
 }
 
 .main_contacto iframe, .maps iframe, .carrito, .contacto iframe {
@@ -50,10 +88,10 @@
   grid-area: subir;
   align-self: center;
   justify-self: center;
-  padding: 10px 20px;
+  padding: 0.5em 1em;
   background-color: rgba(224, 223, 141, 0.911);
   border-radius: 5px;
-  border: 1px solid rgb(128, 101, 29);
+  border: 1px solid rgba(104, 76, 0, 0.95);
 }
 
 .table-container span, .table-container h4, .table-container h1, .informacion h1 {
@@ -64,7 +102,7 @@
   animation: animate 3s infinite;
 }
 
-.footer_contacto, .main_contacto, .art_desc, #redes_sociales, .contacto, .categorias {
+.footer_contacto, .main_contacto, .art_desc, .catalogo, #redes_sociales, .contacto, .categorias {
   background-color: rgba(160, 255, 239, 0.418);
 }
 
@@ -120,6 +158,7 @@ header {
   grid-template-areas: "logo busqueda login" "logo navbar navbar";
   box-sizing: border-box;
   background-color: rgba(225, 233, 120, 0.705);
+  padding-right: 0.5rem;
 }
 
 .logo {
@@ -128,8 +167,8 @@ header {
 }
 
 .imglogo {
-  width: 125px;
-  height: 125px;
+  width: 8rem;
+  height: 8rem;
 }
 
 .barbusqueda {
@@ -137,86 +176,58 @@ header {
   align-self: center;
   justify-self: center;
   position: relative;
+  width: 70%;
 }
-.barbusqueda button {
-  background-color: rgba(207, 230, 253, 0.753);
-  position: absolute;
-  border: 1px solid rgb(128, 101, 29);
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-}
-.boton-hambur {
-  display: none;
-}
-
-input {
-  width: 300px;
+.barbusqueda input {
+  width: 100%;
   height: 32px;
-  border: 1px solid rgb(128, 101, 29);
+  border: 1px solid rgba(104, 76, 0, 0.95);
   border-right: none;
   background-color: rgba(207, 230, 253, 0.753);
   outline: none;
   border-radius: 5px 0 0 5px;
   padding-left: 5px;
 }
+.barbusqueda button {
+  background-color: rgba(207, 230, 253, 0.753);
+  position: absolute;
+  border: 1px solid rgba(104, 76, 0, 0.95);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.boton-hambur {
+  display: none;
+}
 
 .signin_signup {
   grid-area: login;
-  justify-self: center;
-  margin-top: 15px;
+  justify-self: end;
+  margin-top: 10px;
 }
 .signin_signup a {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 0.4rem;
 }
 
 .nav__bar {
   grid-area: navbar;
-  padding-bottom: 10px;
+  padding: 0 15px 10px 0;
   align-self: end;
 }
-header a {
-  position: relative;
-  padding: 0.3em 0.4em;
-  transition: all 0.35s ease;
-  display: inline-block;
+.nav__bar li {
+  display: flex;
+  align-items: center;
 }
-header a:hover {
-  transform: scale(1.2);
-}
-header a:not(.logo a):before, header a:not(.logo a):after {
-  content: "";
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  transition: all 0.35s ease;
-  opacity: 0;
-}
-header a:not(.logo a):before {
-  content: "";
-  right: 0;
-  top: 0;
-  border-top: 3px solid goldenrod;
-  border-right: 3px solid rgb(128, 101, 29);
-  transform: translate(-100%, 50%);
-}
-header a:not(.logo a):after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid rgb(128, 101, 29);
-  border-left: 3px solid goldenrod;
-  transform: translate(100%, -50%);
-}
-header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
-  transform: translate(0, 0);
-  opacity: 1;
+.nav__bar a span {
+  display: block;
+  text-align: center;
 }
 
 /* -------------------------------------------------------header */
 .carrusel-img img { /*imagenes para carrousel */
-  height: 525px;
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
 }
 
 /* -------------------------------------------------------main */
@@ -225,22 +236,27 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 }
 .categorias h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0;
 }
+.boton-hambur {
+  display: none;
+}
+
 /* -------------------------------------------------------section categorias*/
 .contacto {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px 15px 0 15px;
+  padding: 1.2rem 0.9rem 0 0.75rem;
+  text-align: center;
 }
 .contacto h3 {
   margin: 50px 0;
 }
 .contacto iframe {
-  width: 400px;
-  height: 220px;
+  width: 95vw;
+  height: 300px;
   margin: 20px 0;
 }
 
@@ -258,6 +274,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   place-self: end;
   margin-right: 20px;
 }
+
 .line {
   grid-area: line;
   align-self: center;
@@ -271,37 +288,46 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   grid-area: redes;
   align-self: center;
 }
-
+.redes img {
+  width: 5em;
+  height: 5em;
+}
 .gmail {
   display: none;
 }
 
 /* -------------------------------------------------------footer */
 .catalogo h1 {
-  margin: 15px 0 0 15px;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  padding-left: 1rem;
 }
 
 .art_desc {
-  height: 450px;
-  overflow: auto;
-  border: outset 3px rgba(255, 195, 31, 0.849);
   text-align: center;
-  margin: 15px;
-  scrollbar-width: none;
+  padding: 0.2rem;
 }
 .art_desc ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 1rem;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em;
 }
 .art_desc li {
   display: flex;
   flex-direction: column;
+  padding: 1em 0;
 }
+.art_desc a {
+  font-size: 1.2em;
+}
+.art_desc span {
+  font-size: 1.2em;
+}
+
 .catego_catalogo {
-  border-bottom: 3px solid rgb(128, 101, 29);
+  border-bottom: 3px solid rgba(104, 76, 0, 0.95);
 }
 
 .ico_chango button {
@@ -319,12 +345,12 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.801);
 }
 
 .informacion {
-  width: 500px;
+  width: 27rem;
   text-align: center;
   align-self: center;
   margin: 30px 0;
@@ -332,9 +358,11 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 .informacion p {
   padding: 15px;
 }
+.info_logo {
+  align-self: center;
+}
 .info_logo img {
-  width: 550px;
-  height: 550px;
+  width: 50vw;
 }
 
 .maps iframe {
@@ -349,41 +377,47 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 50px;
-  gap: 20px;
+  gap: 0;
   grid-template-areas: "title-contact title-location" "cont contacto_maps" ". name_street";
   align-items: center;
-  padding: 20px;
+  padding: 1rem 2rem 50px 2rem;
 }
 .main_contacto iframe {
-  width: 525px;
-  height: 425px;
+  width: 50vw;
+  height: 50vh;
+  margin-left: 0.8vw;
 }
 
 .title-contact {
   grid-area: title-contact;
   font-size: calc(1.325rem + 0.9vw);
+  text-align: center;
 }
 
 .title-location {
   grid-area: title-location;
+  text-align: center;
 }
 
 .cont {
   grid-area: cont;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
-.cont a {
-  margin: 25px 0;
-  font-size: 25px;
-  /* text-decoration: none; ya esta declarado en generales */
+.cont span {
+  display: inline-block;
+  margin: 1.2rem 0;
+  font-size: 2.5vw;
 }
 
 .name_street {
   grid-area: name_street;
 }
-.name_street a {
-  font-size: 20px;
+.name_street span {
+  display: inline-block;
+  font-size: 2.15vw;
+  margin-top: 1.2rem;
 }
 
 .contacto_maps {
@@ -404,7 +438,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 .footer_contacto p {
   grid-area: copyr;
   place-self: end;
-  margin-right: 20px;
+  margin-right: 1.5rem;
   font-size: calc(1.3rem + 0.6vw);
 }
 
@@ -431,6 +465,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
 .table-container :first-child {
   grid-column-start: 1;
   grid-column-end: 6;
+  border: 0;
 }
 .table-container :nth-last-child(2) {
   grid-column-start: 1;
@@ -444,13 +479,18 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   border-right: none;
   border-bottom: none;
 }
+.table-container h1 {
+  font-size: 5vw;
+}
 .table-container h4 {
   margin: 0;
   border-right: 0;
+  font-size: 4vw;
 }
 .table-container span {
   border-top: 0;
   border-right: 0;
+  font-size: 3.2vw;
 }
 
 .tyc {
@@ -469,9 +509,6 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-  }
-  .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda {
-    display: none;
   }
   .boton-hambur {
     display: inline-block;
@@ -499,22 +536,30 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
     color: aliceblue;
     font-family: "Merri", serif;
     font-weight: 600;
+    transition: all 0.35s ease;
+  }
+  .list-hambur a:hover {
+    color: aliceblue;
+    background-color: rgba(120, 90, 252, 0.884);
+    transform: scale(1.12);
   }
   .carrusel-img img {
     height: 435px;
   }
-  .categorias, .contacto, #redes_sociales {
-    background-color: transparent;
+  .categorias, .contacto, #redes_sociales, .main_contacto, .footer_contacto {
+    background-color: transparent; /* selectores compartidos */
   }
-  .categorias h2, .contacto h2, .catalogo h1 {
-    font-size: 38px;
+  .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda, .categorias ul, .cont span, .footer_contacto a {
+    display: none; /* selectores compartidos */
   }
-  .categorias a {
-    font-size: 25px;
+  .categorias h2, .contacto h2 {
+    font-size: 8.7vw;
   }
-  .categorias ul {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  .categorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
   .contacto {
     flex-direction: column;
@@ -537,15 +582,15 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
     flex-wrap: wrap;
     align-items: center;
   }
-  .redes li {
-    display: flex;
-  }
   .redes {
     align-self: normal;
   }
-  .gmail img {
-    height: 105px;
-    width: 95px;
+  .redes li {
+    display: flex;
+  }
+  .redes img {
+    height: 5rem;
+    width: 5rem;
   }
   .line_footer h3 {
     place-self: center;
@@ -555,6 +600,7 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   /* media query de catalogo */
   .catalogo h1 {
     text-align: center;
+    font-size: 32px;
   }
   .art_desc ul {
     display: flex;
@@ -566,6 +612,61 @@ header a:not(.logo a):hover::before, header a:not(.logo a):hover::after {
   }
   .ico_chango button, .art_desc {
     background-color: transparent;
+  }
+  /* media query de sobre nosotros */
+  .nosotros img {
+    width: 85vw;
+  }
+  /* media query de contacto */
+  .main_contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    align-items: normal;
+    gap: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  .main_contacto .cont {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main_contacto .cont img {
+    width: 18vw;
+  }
+  .main_contacto iframe {
+    width: 93vw;
+  }
+  .main_contacto .name_street {
+    display: flex;
+    flex-direction: row;
+  }
+  .main_contacto .name_street img {
+    width: 15vw;
+  }
+  .main_contacto .name_street span {
+    font-size: 4.7vw;
+  }
+  .footer_contacto {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .footer_contacto p {
+    display: inline-block;
+    margin-right: 0;
+  }
+  /* media querie carrito */
+  .main_carrito {
+    margin: 0;
+  }
+  .table-container h1 {
+    font-size: 8vw;
+  }
+  .table-container h4 {
+    font-size: 4.5vw;
+  }
+  .table-container span {
+    font-size: 4.5vw;
   }
 }
 

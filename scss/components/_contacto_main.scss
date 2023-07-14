@@ -1,49 +1,59 @@
 .main_contacto{
-    @include layout_grid(grid, 1fr 1fr, auto auto 50px, 20px);
+    @include layout_grid(grid, 1fr 1fr, auto auto 50px, 0);
     grid-template-areas: 
     "title-contact title-location"
     "cont contacto_maps"
     ". name_street";
     align-items: center;
-    padding: 20px;
+    padding: 1rem 2rem 50px 2rem;
     @extend %fondo_azulejo;
     iframe{
-        width: 525px;
-        height: 425px;
+        width: 50vw;
+        height: 50vh;
         @extend %b_curve_gold;
+        margin-left: 0.8vw;
     }
+    
 }
 .title-contact{
     grid-area: title-contact;
     @extend %tipografia_merri;
     font-size: calc(1.325rem + .9vw);
+    text-align: center;
 }
 .title-location{
     grid-area: title-location;
+    text-align: center;
 }
 .cont 
 {
     grid-area: cont;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     img{
         @extend %img_redes;
+        @extend %trans_scale_enlace;
     }
-    a{
-        margin: 25px 0;
-        font-size: 25px;
+    span{
+        display: inline-block;
+        margin: 1.2rem 0;
+        font-size: 2.5vw;
         @extend %tipografia_merri;
-        /* text-decoration: none; ya esta declarado en generales */   
+        @extend %trans_scale_enlace;
     }
 }
 .name_street{
     grid-area: name_street;
     img{
         @extend %img_redes;
+        @extend %trans_scale_enlace;
     }
-    a{
-        font-size: 20px;
+    span{
+        display: inline-block;
+        font-size: 2.15vw;
         @extend %tipografia_merri;
+        margin-top: 1.2rem;
     }
 }
 .contacto_maps{
@@ -64,7 +74,7 @@
     p{
         grid-area: copyr;
         place-self: end;
-        margin-right: 20px;
+        margin-right: 1.5rem;
         @extend %tipografia_merri;
         font-size: calc(1.3rem + .6vw);
     }

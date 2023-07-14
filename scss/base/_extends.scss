@@ -3,9 +3,48 @@
 }
 
 %img_redes{
-    width: 60px;
-    height: 60px; 
-    margin-right: 30px;
+    width: 5.5vw;
+    margin-right: 1.3vw;
+}
+%trans_scale_enlace{
+    position: relative;
+    transition: all .35s ease;
+    display: inline-block;
+    padding: .3em .4em;
+    &:hover{
+        transform: scale(1.12);
+    }
+}
+%trans_scale_enlace_after{
+    @extend %trans_scale_enlace;
+    &:before, &:after{
+        content: '';
+        height: .8em;
+        width: .8em;
+        position: absolute;
+        transition: all .35s ease;
+        opacity: 0;
+    }
+    &:before{
+        content: '';
+        right: 0;
+        top: 0;
+        border-top: 0.2em solid map-get($map_colores, dorado);
+        border-right: 0.2em solid map-get($map_colores, dorado_opaco);
+        transform: translate(-1em, 0.5em);
+    }
+    &:after{
+        content: '';
+        left: 0;
+        bottom: 0;
+        border-bottom: 0.2em solid map-get($map_colores, dorado_opaco);
+        border-left: 0.2em solid map-get($map_colores, dorado);
+        transform: translate(1em, -.5em);
+    }
+    &:hover::before, &:hover::after{
+        transform: translate(0,0);
+        opacity: 1;
+    }
 }
 %tipografia_merri{
     font-family: "Merri", serif;
@@ -13,7 +52,7 @@
     color: map-get($map_colores, dorado_opaco);
     &_size{
         @extend %tipografia_merri;
-        font-size: 18px;
+        font-size: 1.8vw;
     }
 }
 %text_gradient_gold{
@@ -37,7 +76,7 @@
     grid-area: subir;
     align-self: center;
     justify-self: center;
-    padding: 10px 20px;
+    padding: .5em 1em;
     background-color: map-get($map_colores, fondo_btn_volver);
     border-radius: 5px;
     border: 1px solid map-get($map_colores, dorado_opaco);

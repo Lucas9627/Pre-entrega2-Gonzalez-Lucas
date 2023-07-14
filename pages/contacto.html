@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Nos encontramos en Villa Luro, Capital Federal. No dude en consultarnos desde nuestras redes sociales, incluso desde nuestro número para coordinar nuestras ventas.">
         <meta name="keywords" content="Villa Luro, Capital Federal, CABA, contacto, thais bijouterie, redes sociales, google maps, ">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -23,21 +22,53 @@
                 <input type="text" placeholder="Barra de Búsqueda">
                 <button><img src="../imagenes/icono_busqueda.png" alt="icono_lupa"></button>
             </div><!-- UNA BARRA DE BUSQUEDA -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle boton-hambur" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>&#9776;</span>
+                </button>
+                <ul class="dropdown-menu list-hambur">
+                    <li>
+                        <a class="dropdown-item" href="#">INICIAR SESIÓN</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">REGISTRARSE</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../index.html">INICIO</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">CATALOGO</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="contacto.html">CONTACTO</a>
+                    </li> 
+                    <li>
+                        <a class="dropdown-item" href="carrito_compras.html">CARRITO DE COMPRAS</a>
+                    </li>
+                </ul>
+              </div>       
+            </div>
             <div class="signin_signup">
-                    <a href="">INICIAR SESION</a><!-- PARA LOGEARSE -->
-                    <a href="">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
-            </div><!-- PARA EL LOGIN Y REGISTRARSE. AUN NO SE HA LINKEADO NADA -->
+                    <a href="ingresar.html">INGRESAR</a><!-- PARA LOGEARSE -->
+                    <a href="registrarse.html">REGISTRARSE</a><!-- PARA REGISTRARSE POR PRIMERA VEZ -->
+            </div>
             <nav class="nav__bar">
                 <ul>
                     <li>
-                        <a href="../index.html">INICIO</a><!-- ME LLEVARA AL   INICIO DE LA PAGINA -->
+                        <a href="../index.html">INICIO</a><!-- ME LLEVARA AL INICIO DE LA PAGINA -->
                     </li>
                     
                     <li>
                         <a href="catalogo.html">CATALOGO</a><!-- ME LLEVARA A LA PAGINA DE CATALOGO -->
                     </li>
                     <li>
-                        <a href="sobre_nosotros.html">SOBRE NOSOTROS</a><!-- ME LLEVARA A LA SECCION DE INFORMACION DE LA MARCA -->
+                        <a href="sobre_nosotros.html">
+                            <span>SOBRE</span>
+                            <span>NOSOTROS</span>
+                        </a><!-- ME LLEVARA A LA SECCION DE INFORMACION DE LA MARCA -->
                     </li>
                 
                     <li>
@@ -45,7 +76,10 @@
                     </li>
                 
                     <li>
-                        <a href="carrito_compras.html">CARRITO DE COMPRAS</a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
+                        <a href="carrito_compras.html">
+                            <span>CARRITO</span>
+                            <span>DE COMPRAS</span>
+                        </a><!-- ME LLEVARA A LA PAGINA DE CARRITO DE COMPRA -->
                     </li>
                     </ul>
                 </nav>
@@ -53,24 +87,78 @@
         <main class="main_contacto">
             <h1 class="title-contact">Contáctanos a nuestros portales.</h1>
             <div class="cont">   
-                <a href=""target="_blank"><img src="../imagenes/whatsapp.png" alt="Icono Whats'app">Numero Falso</a>
+                <a href=""target="_blank"><img src="../imagenes/whatsapp.png" alt="Icono Whats'app">
+                    <span>Numero Falso</span>
+                </a>
                 <!-- no contemplado -->
-                <a href="https://www.facebook.com/ThaisBijouterieAccesorios"target="_blank"><img src="../imagenes/facebook.png" alt="Icono Facebook">Síguenos en Facebook</a>
-                <a href="https://www.instagram.com/thaisbijouterie1/" target="_blank"><img src="../imagenes/instagram.png" alt="Icono instagram">Síguenos en Instagram</a>
-                <a href=""target="_blank"><img src="../imagenes/gmail.png" alt="Icono de Gmail">fakemail@gmail.com</a><!-- no contemplado -->
+                <a href="https://www.facebook.com/ThaisBijouterieAccesorios"target="_blank"><img src="../imagenes/facebook.png" alt="Icono Facebook">
+                    <span>Síguenos en Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/thaisbijouterie1/" target="_blank"><img src="../imagenes/instagram.png" alt="Icono instagram">
+                    <span>Síguenos en Instagram</span>
+                </a>
+                <a href=""target="_blank"><img src="../imagenes/gmail.png" alt="Icono de Gmail">
+                    <span>fakemail@gmail.com</span>
+                </a><!-- no contemplado -->
             </div>
             <h2 class="title-location">Puedes visitarnos también a nuestro local.</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52529.59935972426!2d-58.583322349999996!3d-34.62691415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1684282558369!5m2!1ses!2sar"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="name_street">
                 <img src="../imagenes/icono_maps.png" alt="Icono de ubicación">
-                <a href="https://goo.gl/maps/4PutQ6aeva8oP7BQ9" target="_blank">Calle Falsa 1234, Capital Federal, Argentina</a>
+                <a href="https://goo.gl/maps/4PutQ6aeva8oP7BQ9" target="_blank">
+                    <span>Calle Falsa 1234, CABA, Argentina</span>
+                </a>
             </div>
         </main>
+        <section class="categorias catego_catalogo">
+            <h2>CATEGORIAS</h2>
+            <ul>
+                <li>
+                    <a href="catalogo.html">ANILLOS</a>
+                </li>                    
+                <li>
+                    <a href="catalogo.html">PULSERAS</a>
+                </li>                
+                <li>
+                    <a href="catalogo.html">SUJETA-ANTEOJOS</a>
+                </li>            
+                <li>
+                    <a href="catalogo.html">COLLARES</a>
+                </li>            
+                <li>
+                    <a href="catalogo.html">AROS</a>
+                </li>            
+            </ul>
+            <div class="dropdown"><!-- MENU HAMBURGUESA -->
+                <button class="btn btn-secondary dropdown-toggle boton-hambur" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>&#9776;</span>
+                </button>
+                <ul class="dropdown-menu list-hambur">
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">ANILLOS</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">PULSERAS</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">SUJETA-ANTEOJOS</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">COLLARES</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="catalogo.html">AROS</a>
+                    </li>
+                </ul>
+              </div>       
+            </div>    
+        </section>
         <footer class="footer_contacto">
             <div class="line"></div>
-            <a href="#principio">SUBIR</a>
+            <a href="#principio">VOLVER</a>
             <div class="line line2"></div>
             <p>Derechos de autor</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>

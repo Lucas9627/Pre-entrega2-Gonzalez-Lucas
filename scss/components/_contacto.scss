@@ -1,14 +1,16 @@
 .contacto{
-    @include layout_flex(flex, row, nowrap, space-around);
-    padding: 20px 15px 0 15px;
+    @include layout_flex(flex, row, wrap, space-around);
+    padding: 1.2rem 0.9rem 0 0.75rem;
     @extend %linea_divisora;
     @extend %fondo_azulejo;
+    text-align: center;
     h3{
         margin: 50px 0;
+       
     }
     iframe{
-        width: 400px;
-        height: 220px;
+        width: 95vw;
+        height: 300px;
         margin: 20px 0;
         @extend %b_curve_gold;
     }

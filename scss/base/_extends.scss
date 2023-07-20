@@ -91,3 +91,10 @@
 %fondo_azulejo{
     background-color: map-get($map_colores, fondo_azulcristal);
 }
+%borde_letra{
+    text-shadow: 
+        -1px -1px 0 map-get($map_colores, dorado_opaco),
+        1px -1px 0 map-get($map_colores, dorado_opaco),
+        -1px 1px 0 map-get($map_colores, dorado_opaco),
+        1px 1px 0 map-get($map_colores, dorado_opaco);
+}

@@ -50,7 +50,7 @@
     .categorias, .contacto, #redes_sociales, .main_contacto, .footer_contacto{
         background-color: transparent;/* selectores compartidos */
     }
-    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda, .categorias ul, .cont span, .footer_contacto a{
+    .nav__bar, .signin_signup, .line, .volver_ini, .index_visita h2, .index_consulta h5, .barbusqueda, .categorias ul, .cont span, .footer_contacto a, .g-recaptcha{
         display: none; /* selectores compartidos */
     }
     .categorias h2, .contacto h2{
@@ -172,6 +172,161 @@
         }
         span{
             font-size: 4.5vw;
+        }
+    }
+    /* media query de form_regis */
+    .main_regis{     
+        border-bottom: 3px solid map-get($map_colores , dorado_opaco);
+        h1{
+            font-size: 9vw;
+        }
+        .regis{
+            img{
+            display: none;
+            }
+            form{
+                position: static;
+                margin-top: 0;
+                .form_regis{
+                    input{
+                        font-size: 4vw;
+                        width: 90vw;
+                    }
+                }
+                label{
+                    font-size: 5vw;
+                }
+                .g-recaptcha{
+                    margin-top: 1.5rem;
+                }
+            }
+            .checkbox{
+                padding: 0 3vw;
+                .check{
+                    width: 15vw;
+                }
+                label{
+                    text-align: center;
+                }
+            }
+        }
+        p{
+            a{
+                font-size: 5vw;
+            }
+        }
+        .btn_regis{
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 5vw;
+        }
+    }
+    /* media query de ingresar */
+    .main_ingreso{     
+        border-bottom: 3px solid map-get($map_colores , dorado_opaco);
+        h1{
+            font-size: 9vw;
+        }
+        .ingr{
+            img{
+            display: none;
+            }
+            form{
+                position: static;
+                margin-top: 0;
+                .form_ingreso{
+                    input{
+                        font-size: 4vw;
+                        width: 90vw;
+                    }
+                }
+                label{
+                    font-size: 5vw;
+                }
+            }
+        }
+        p{
+            font-size: 5vw;
+        }
+        .btn_ingreso{
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 5vw;
+        }
+    }
+}
+/* media query entre 577px a 850px */
+@include breakpoint(577px, 850px){
+    /* media query de form_regis */
+    .main_regis{
+        height: 62.5em;
+        h1{
+            font-size: 6vw;
+        }
+        .regis{
+            img{
+            width: 100vw;
+            }
+            form{
+                margin-top: 0;
+                .form_regis{
+                    input{
+                        font-size: 2.5vw;
+                        width: 80vw;
+                    }
+                }
+                label{
+                    font-size: 3.5vw;
+                }
+                .g-recaptcha{
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+        p{
+            a{
+                font-size: 3.5vw;
+            }
+        }
+        .btn_regis{
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 2.5vw;
+        }
+    }
+    /* media query de ingresar */
+    .main_ingreso{
+        height: 140vh;
+        h1{
+            font-size: 6vw;
+        }
+        .ingr{
+            img{
+            width: 80vw;
+            }
+            form{
+                margin-top: 0;
+                .form_ingreso{
+                    input{
+                        font-size: 2.5vw;
+                        width: 80vw;
+                    }
+                }
+                label{
+                    font-size: 3.5vw;
+                }
+                .g-recaptcha{
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+        p{
+            font-size: 3.5vw;
+        }
+        .btn_ingreso{
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            font-size: 2.5vw;
         }
     }
 }

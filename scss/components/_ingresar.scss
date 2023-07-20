@@ -1,0 +1,78 @@
+.main_ingreso{
+    background-color: map-get($map_colores, fondo_tabla);
+    padding: 1.5vh 0 2vh 0;
+    h1{
+        @extend %tipografia_merri;
+        text-align: center;
+        font-size: 5vw;
+        color: rgba(176, 219, 73, 0.849);
+        @extend %borde_letra;
+    }
+    .ingr{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        form{
+            margin-top: 0.5rem;
+            position: absolute;
+            @include layout_flex(flex, column, wrap, center);
+            width: 100%;
+            z-index: 99;
+            padding: 2rem 0;
+            .form_ingreso{
+                display: flex;
+                flex-direction: column;
+                input{
+                    @extend %tipografia_merri;
+                    font-size: 1.8vw;
+                    width: 60vw;
+                    border-radius: 10px;
+                    border: 1px solid map-get($map_colores, dorado_opaco);
+                    margin-bottom: 30px;
+                    padding: 0.25rem 1rem;
+                    box-shadow: 0 0 1.4em #242101;
+                    &:focus{
+                        border: 3px solid;
+                        outline: none;
+                        background-color: map-get($map_colores, fondo_btn_volver);
+                    }
+                    &:focus::placeholder{
+                        color: transparent;
+                    }
+                }
+            }
+            label{
+                @extend %tipografia_merri;
+                font-size: 2.2vw;
+                color: rgba(176, 219, 73, 0.849);
+                @extend %borde_letra;
+                margin-left: 5px;
+            }
+        }
+        img{
+            opacity: .5;
+            width: 58vw;
+        }
+    }
+    p{
+        @extend %tipografia_merri;
+        @extend %borde_letra;
+        color: rgba(176, 219, 73, 0.849);
+        font-size: 2vw;
+        margin: 2rem 0;
+        a{
+            color: rgb(253, 255, 127);
+            @extend %trans_scale_enlace;
+            padding: 0 0 0 3px; 
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.btn_ingreso{
+    background-color: map-get($map_colores, fondo_btn_volver);
+    @extend %tipografia_merri;
+    padding: 0.5rem 1rem;
+    font-size: 1.8vw;
+}
